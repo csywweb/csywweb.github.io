@@ -4,8 +4,23 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <title>去除字符串左右空格</title>
+<link rel="stylesheet" type="text/css" href="../../styles/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="../../styles/styles.css">
 </head>
 <body>
-    
+    <div>
+    	<input type="text" value="     需要过滤的空格      " id="input">
+    	<button class="btn btn-primary btn-sm" id="btn">过滤</button>
+    </div>
+<script type="text/javascript">
+	function trim(str){
+		return (str || "").replace(/^\s+|\s+$/g,"");
+	}
+	var input = document.getElementById('input');
+    var btn = document.getElementById('btn');
+    btn.onclick = function(){
+        input.value = trim(input.value);
+    }
+</script>
 </body>
 </html>
