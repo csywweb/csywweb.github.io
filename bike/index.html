@@ -7,27 +7,50 @@
 	<title>湖南路翔电动车电子商务平台</title>
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
 	<link rel="stylesheet" type="text/css" href="styles/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="styles/dropload.css">
 	<script type="text/javascript" src="scripts/jquery.js"></script>
+	<script src="scripts/dropload.min.js"></script>
 	<script src="scripts/swiper.min.js"></script>
 	<script type="text/javascript">
 	var rem = window.innerWidth/3.2;
 		function init(){
 			document.documentElement.style.fontSize = window.innerWidth/3.2 + 'px';
-			var height = $(window).height();
-			$("body").height(height);
-			$("main").height(height);
+			
 
-			console.log($(".grid-menu").height() )
-			var height1 = -($(".grid-menu").height() +  0.15*rem);
+			//console.log($(".grid-menu").height() )
+			var height1 = -($(".grid-menu").height() +  0.3*rem + 10);
 			$(".grid-list").css("bottom", height1);
 		}
 	</script>
+	<script>
+		/*(function($){
+			$(function(){
+				var pulldownAction = function(){
+					
+					console.log("下拉执行逻辑");
+				};
+				//上拉逻辑
+				var pullupAction = function(){
+					
+					var temp = '';
+					for(var i=1;i<16;i++){
+						temp += '<dd>'+i+'</dd>';
+					}
+					$('#dataArea').append(temp);
+					this.refresh();
+					console.log("上拉执行逻辑");
+				};
+				var iscrollObj = iscrollAssist.newVerScrollForPull($('#wrapper'),pulldownAction,pullupAction);
+				iscrollObj.refresh();
+			});
+		})(jQuery);*/
+	</script>
 </head>
 <body onload="init()">
-	<main class="ub ub-ver index">
+	<main class=" index">
 		<!-- 内容 -->
-		<div class="ub-f1 container">
-			<div class="ub-con">
+		<div class=" container"  >
+			<div class="ub-con1">
 				<!-- 顶部 -->
 				<div class="top">
 					<div class="col-12 grid-call">
@@ -60,21 +83,21 @@
 				<!-- 分类 start -->
 				<div class=" grid-menu">
 					<div class="relative col-12">
-						<div class="col-3">
+						<div class="col-3 tx-c">
 							<div class="item js-peijian"><img src="images/icon-peijian.png"></div>
-							<p class="tx-c">配件</p>
+							<span class="tx-c">配件</span>
 						</div>
-						<div class="col-3">
+						<div class="col-3 tx-c">
 							<div class="item"><img src="images/icon-zhengche.png"></div>
-							<p class="tx-c">整车</p>
-						</div>
-						<div class="col-3">
+							<span class="tx-c">整车</span>
+						</div> 
+						<div class="col-3 tx-c">
 							<div class="item"><img src="images/icon-diy.png"></div>
-							<p class="tx-c">DIY</p>
+							<span class="tx-c">DIY</span>
 						</div>
-						<div class="col-3">
+						<div class="col-3 tx-c">
 							<div class="item"><img src="images/icon-shop.png"></div>
-							<p class="tx-c">店铺</p>
+							<span class="tx-c">店铺</span>
 						</div>
 						<!-- 浮动二级菜单 -->
 						<div class="grid-list peijian">
@@ -105,116 +128,174 @@
 				</div>
 				<!-- 新闻 end -->
 				<!-- 品牌列表 -->
-				<section  class="uof">
-					<div class="head relative">
-						<span class="title">上海立马</span><img src="images/lima-logo.png" class="lima-logo logo">
-						<img src="images/icon-dot.jpg" class="dot" >
-					</div>
-					<img src="images/lima-slide.jpg" class="bk slide" >
-					<div class="col-12">
-						<!-- 这里干脆把文字和图放一起了。。 弄起来好麻烦 -->
-						<div class="col-6 uof bor-r">
-							<img src="images/lima-1.jpg" class="bk" alt="">
+				<div class="brand-list" id="dataArea" >
+					<section  class="uof">
+						<div class="head relative">
+							<span class="title">上海立马</span><img src="images/lima-logo.png" class="logo">
+							<a href="javascript:;">
+								<img src="images/icon-dot.jpg" class="dot" >
+							</a>
 						</div>
-						<div class="col-6 uof">
-							<div class="uof bor-b">
-								<img src="images/lima-2.jpg" class="bk"  alt="">
+						<img src="images/lima-slide.jpg" class="bk slide" >
+						<div class="col-12 img-list">
+							<!-- 这里干脆把文字和图放一起了。。 弄起来好麻烦 -->
+							<div class="col-6 uof bor-r left">
+								<h2>动感骑士</h2>
+								<h3>霸气越野</h3>
+								<a href="javascript:;">
+									<img src="images/big-1.jpg" class="bk" alt="">
+								</a>
 							</div>
-							<div class="uof">
-								<img src="images/lima-3.jpg" class="bk"  alt="">
-							</div>
-						</div>
-					</div>
-				</section>
-				<section  class="uof">
-					<div class="head relative">
-						<span class="title">GBG酷车</span><img src="images/gbg-logo.png" class=" logo">
-						<img src="images/icon-dot.jpg" class="dot" >
-					</div>
-					<img src="images/gbg-slide.jpg" class="bk slide" >
-					<div class="col-12">
-						<!-- 这里干脆把文字和图放一起了。。 弄起来好麻烦 -->
-						<div class="col-6 uof bor-r">
-							<img src="images/gbg-1.jpg" class="bk" alt="">
-						</div>
-						<div class="col-6 uof">
-							<div class="uof bor-b">
-								<img src="images/gbg-2.jpg" class="bk"  alt="">
-							</div>
-							<div class="uof">
-								<img src="images/gbg-3.jpg" class="bk"  alt="">
+							<div class="col-6 uof right">
+								<div class="uof bor-b relative">
+									<h2>帅气轻盈</h2>
+									<h3>多色可选</h3>
+									<a href="javascript:;">
+										<img src="images/small-1.jpg" class="bk"  alt="">
+									</a>
+								</div>
+								<div class="uof relative" >
+									<h2>帅气轻盈</h2>
+									<h3>多色可选</h3>
+									<a href="javascript:;">
+										<img src="images/small-2.jpg" class="bk"  alt="">
+									</a>
+								</div>
 							</div>
 						</div>
-					</div>
-				</section>
-				<section class="uof">
-					<div class="head relative">
-						<span class="title">彪牌电动车</span><img src="images/biaopai-logo.png" class="logo">
-						<img src="images/icon-dot.jpg" class="dot" >
-					</div>
-					<img src="images/biaopai-slide.jpg" class="bk slide" >
-					<div class="col-12">
-						<!-- 这里干脆把文字和图放一起了。。 弄起来好麻烦 -->
-						<div class="col-6 uof bor-r">
-							<img src="images/biaopai-1.jpg" class="bk" alt="">
+					</section>
+					<section  class="uof">
+						<div class="head relative">
+							<span class="title">GBG酷车</span><img src="images/gbg-logo.png" class=" logo">
+							<a href="javascript:;">
+								<img src="images/icon-dot.jpg" class="dot" >
+							</a>
 						</div>
-						<div class="col-6 uof">
-							<div class="uof bor-b">
-								<img src="images/biaopai-2.jpg" class="bk"  alt="">
+						<img src="images/gbg-slide.jpg" class="bk slide" >
+						<div class="col-12 img-list">
+							<!-- 这里干脆把文字和图放一起了。。 弄起来好麻烦 -->
+							<div class="col-6 uof bor-r left">
+								<h2>动感骑士</h2>
+								<h3>霸气越野</h3>
+								<a href="javascript:;">
+									<img src="images/big-1.jpg" class="bk" alt="">
+								</a>
 							</div>
-							<div class="uof">
-								<img src="images/biaopai-3.jpg" class="bk"  alt="">
-							</div>
-						</div>
-					</div>
-				</section>
-				<section  class="uof">
-					<div class="head relative">
-						<span class="title">雅迪电动车</span><img src="images/yadi-logo.jpg" class="logo">
-						<img src="images/icon-dot.jpg" class="dot" >
-					</div>
-					<img src="images/lima-slide.jpg" class="bk slide" >
-					<div class="col-12">
-						<!-- 这里干脆把文字和图放一起了。。 弄起来好麻烦 -->
-						<div class="col-6 uof bor-r">
-							<img src="images/lima-1.jpg" class="bk" alt="">
-						</div>
-						<div class="col-6 uof">
-							<div class="uof bor-b">
-								<img src="images/lima-2.jpg" class="bk"  alt="">
-							</div>
-							<div class="uof">
-								<img src="images/lima-3.jpg" class="bk"  alt="">
+							<div class="col-6 uof right">
+								<div class="uof bor-b relative">
+									<h2>帅气轻盈</h2>
+									<h3>多色可选</h3>
+									<a href="javascript:;">
+										<img src="images/small-1.jpg" class="bk"  alt="">
+									</a>
+								</div>
+								<div class="uof relative" >
+									<h2>帅气轻盈</h2>
+									<h3>多色可选</h3>
+									<a href="javascript:;">
+										<img src="images/small-2.jpg" class="bk"  alt="">
+									</a>
+								</div>
 							</div>
 						</div>
-					</div>
-				</section>
+					</section>
+					<section class="uof">
+						<div class="head relative">
+							<span class="title">彪牌电动车</span><img src="images/biaopai-logo.png" class="logo">
+							<a href="javascript:;">
+								<img src="images/icon-dot.jpg" class="dot" >
+							</a>
+						</div>
+						<img src="images/biaopai-slide.jpg" class="bk slide" >
+						<div class="col-12 img-list">
+							<!-- 这里干脆把文字和图放一起了。。 弄起来好麻烦 -->
+							<div class="col-6 uof bor-r left">
+								<h2>动感骑士</h2>
+								<h3>霸气越野</h3>
+								<a href="javascript:;">
+									<img src="images/big-1.jpg" class="bk" alt="">
+								</a>
+							</div>
+							<div class="col-6 uof right">
+								<div class="uof bor-b relative">
+									<h2>帅气轻盈</h2>
+									<h3>多色可选</h3>
+									<a href="javascript:;">
+										<img src="images/small-1.jpg" class="bk"  alt="">
+									</a>
+								</div>
+								<div class="uof relative" >
+									<h2>帅气轻盈</h2>
+									<h3>多色可选</h3>
+									<a href="javascript:;">
+										<img src="images/small-2.jpg" class="bk"  alt="">
+									</a>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section  class="uof">
+						<div class="head relative">
+							<span class="title">雅迪电动车</span><img src="images/yadi-logo.jpg" class="logo">
+							<a href="javascript:;">
+								<img src="images/icon-dot.jpg" class="dot" >
+							</a>
+						</div>
+						<img src="images/lima-slide.jpg" class="bk slide" >
+						<div class="col-12 img-list">
+							<!-- 这里干脆把文字和图放一起了。。 弄起来好麻烦 -->
+							<div class="col-6 uof bor-r left">
+								<h2>动感骑士</h2>
+								<h3>霸气越野</h3>
+								<a href="javascript:;">
+									<img src="images/big-1.jpg" class="bk" alt="">
+								</a>
+							</div>
+							<div class="col-6 uof right">
+								<div class="uof bor-b relative">
+									<h2>帅气轻盈</h2>
+									<h3>多色可选</h3>
+									<a href="javascript:;">
+										<img src="images/small-1.jpg" class="bk"  alt="">
+									</a>
+								</div>
+								<div class="uof relative" >
+									<h2>帅气轻盈</h2>
+									<h3>多色可选</h3>
+									<a href="javascript:;">
+										<img src="images/small-2.jpg" class="bk"  alt="">
+									</a>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
 			</div>
 		</div>
-		<!-- 底部 -->
-		<div class="footer">
-			<div class="col-3">
-				<a href="javascript:;" class="tx-c">
-					<img src="images/icon-index.png" alt="">
-					<p>首页</p>
-				</a></div>
-			<div class="col-3">
-				<a href="javascript:;" class="tx-c">
-					<img src="images/icon-item.png" alt="">
-					<p>分类</p>
-				</a></div>
-			<div class="col-3">
-				<a href="javascript:;" class="tx-c">
-					<img src="images/icon-cart.png" alt="">
-					<p>购物车</p>
-				</a></div>
-			<div class="col-3">
-				<a href="javascript:;" class="tx-c">
-					<img src="images/icon-center.png" alt="">
-					<p>个人中心</p>
-				</a></div>
-		</div>
 	</main>
+	<!-- 底部 -->
+	<div class="footer fixed">
+		<div class="col-3">
+			<a href="javascript:;" class="tx-c">
+				<img src="images/icon-index.png" alt="">
+				<p>首页</p>
+			</a></div>
+		<div class="col-3">
+			<a href="javascript:;" class="tx-c">
+				<img src="images/icon-item.png" alt="">
+				<p>分类</p>
+			</a></div>
+		<div class="col-3">
+			<a href="javascript:;" class="tx-c">
+				<img src="images/icon-cart.png" alt="">
+				<p>购物车</p>
+			</a></div>
+		<div class="col-3">
+			<a href="javascript:;" class="tx-c">
+				<img src="images/icon-center.png" alt="">
+				<p>个人中心</p>
+			</a></div>
+	</div>
 <script>
 	$(function(){
 		var swiper = new Swiper('.swiper-container', {
@@ -222,7 +303,7 @@
                         paginationClickable: true
                     }); 
 
-		initStyle();
+		
 		$(".js-peijian").click(function(){
 			if($(this).hasClass("open")){
 				$(".peijian").hide();
@@ -234,10 +315,52 @@
 				$(this).addClass("open");
 			}
 		})
-
+		//上拖刷新
+		$('.brand-list').dropload({
+		    scrollArea : window,
+		    autoLoad   : false,
+		    loadDownFn : function(me){
+		       	//上拖测试
+		        var temp = '';
+				for(var i=1;i<16;i++){
+					temp += '<dd>'+i+'</dd>';
+				}
+				$('#dataArea').append(temp);
+		        me.resetload();
+		        /*
+		        	插件地址 https://github.com/ximan/dropload
+					 $.ajax({
+			            type: 'GET',
+			            url: 'json/more.json',
+			            dataType: 'json',
+			            success: function(data){
+			                alert(data);
+			                // 每次数据加载完，必须重置
+			                me.resetload();
+			            },
+			            error: function(xhr, type){
+			                alert('Ajax error!');
+			                // 即使加载出错，也得重置
+			                me.resetload();
+			            }
+			        });
+		        */
+		    }
+		});
+		scroll();
 	})
-	function initStyle(){
-		
+	
+	function scroll(){
+		$(window).scroll(function(){
+			//console.log($(window).scrollTop());
+			var height_document = $("body").height();
+			var height_window   = $(window).height();
+			var total 			= height_document - height_window;
+			//console.log(document.body.clientHeight);
+			if($(window).scrollTop() == total){
+				//$(".brand-list").css("top","-50px");
+			}
+		})
 	}
 </script>
 </body>
