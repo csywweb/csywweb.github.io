@@ -159,7 +159,7 @@ select { display: block; width: 100%; }
 
 .index .grid-menu .now span { color: #EC3351; font-weight: 800; border: 1px solid #EC3351; }
 
-.index .grid-menu span { font-size: 0.14rem; }
+.index .grid-menu span { font-size: 0.14rem; margin-top: 0.05em; display: inline-block; }
 
 .index .grid-menu .grid-list { display: none; padding: 0.1rem; z-index: 100; position: absolute; border-radius: 0.08rem; left: 0; width: 100%; background-color: #373737; }
 
@@ -169,7 +169,13 @@ select { display: block; width: 100%; }
 
 .index .grid-menu .grid-list .triangle { display: inline-block; width: 0; height: 0; overflow: hidden; line-height: 0; font-size: 0; vertical-align: middle; border-bottom: 7px solid #373737; border-top: 0 none; border-left: 7px solid transparent; border-right: 7px solid transparent; position: absolute; top: -7px; }
 
-.index .grid-menu .peijian .triangle { left: 11%; }
+.index .grid-menu .zhengche .triangle { left: 11%; }
+
+.index .grid-menu .peijian .triangle { left: 35%; }
+
+.index .grid-menu .shop .triangle { left: 85%; }
+
+.index .grid-menu .diy .triangle { left: 60%; }
 
 .index .grid-news { background-color: #FFF; padding: 0.1rem 0.15rem; border-top: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; }
 

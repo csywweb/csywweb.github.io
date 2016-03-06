@@ -61,23 +61,23 @@
 				<div class=" grid-menu">
 					<div class="relative col-12">
 						<div class="col-3 tx-c">
-							<div class="item js-peijian"><img src="images/icon-zhengche.png"></div>
-							<span class="tx-c">整车</span>
+							<div class="item js-pop" data-trigger="zhengche"><img src="images/icon-zhengche.png"></div>
+							<span class="tx-c">整车专区</span>
 						</div>
 						<div class="col-3 tx-c">
-							<div class="item"><img src="images/icon-peijian.png"></div>
-							<span class="tx-c">配件</span>
+							<div class="item js-pop" data-trigger="peijian"><img src="images/icon-peijian.png"></div>
+							<span class="tx-c">配件专区</span>
 						</div> 
 						<div class="col-3 tx-c">
-							<div class="item"><img src="images/icon-diy.png"></div>
-							<span class="tx-c">DIY</span>
+							<div class="item js-pop" data-trigger="diy"><img src="images/icon-diy.png"></div>
+							<span class="tx-c">DIY专区</span>
 						</div>
 						<div class="col-3 tx-c">
-							<div class="item"><img src="images/icon-shop.png"></div>
-							<span class="tx-c">店铺</span>
+							<div class="item js-pop" data-trigger="shop"><img src="images/icon-shop.png"></div>
+							<span class="tx-c">店铺专区</span>
 						</div>
 						<!-- 浮动二级菜单 -->
-						<div class="grid-list peijian">
+						<div class="grid-list zhengche">
 							<div class="triangle"></div>
 							<div class="col-12">
 								<div class="col-3 tx-c"><a href="javascript:;">立马</a></div>
@@ -89,7 +89,48 @@
 								<div class="col-3 tx-c"><a href="javascript:;">奥娃</a></div>
 								<div class="col-3 tx-c"><a href="javascript:;">爱玛</a></div>
 								<div class="col-3 tx-c"><a href="javascript:;">五本</a></div>
-								
+							</div>
+						</div>
+						<div class="grid-list shop">
+							<div class="triangle"></div>
+							<div class="col-12">
+								<div class="col-3 tx-c"><a href="javascript:;">店铺</a></div>
+								<div class="col-3 tx-c"><a href="javascript:;">店铺</a></div>
+								<div class="col-3 tx-c"><a href="javascript:;">店铺</a></div>
+								<div class="col-3 tx-c"><a href="javascript:;">店铺</a></div>
+								<div class="col-3 tx-c"><a href="javascript:;">店铺</a></div>
+								<div class="col-3 tx-c"><a href="javascript:;">店铺</a></div>
+								<div class="col-3 tx-c"><a href="javascript:;">店铺</a></div>
+								<div class="col-3 tx-c"><a href="javascript:;">店铺</a></div>
+								<div class="col-3 tx-c"><a href="javascript:;">店铺</a></div>
+							</div>
+						</div>
+						<div class="grid-list diy">
+							<div class="triangle"></div>
+							<div class="col-12">
+								<div class="col-3 tx-c"><a href="javascript:;">diy</a></div>
+								<div class="col-3 tx-c"><a href="javascript:;">diy</a></div>
+								<div class="col-3 tx-c"><a href="javascript:;">diy</a></div>
+								<div class="col-3 tx-c"><a href="javascript:;">diy</a></div>
+								<div class="col-3 tx-c"><a href="javascript:;">diy</a></div>
+								<div class="col-3 tx-c"><a href="javascript:;">diy</a></div>
+								<div class="col-3 tx-c"><a href="javascript:;">diy</a></div>
+								<div class="col-3 tx-c"><a href="javascript:;">diy</a></div>
+								<div class="col-3 tx-c"><a href="javascript:;">diy</a></div>
+							</div>
+						</div>
+						<div class="grid-list peijian">
+							<div class="triangle"></div>
+							<div class="col-12">
+								<div class="col-3 tx-c"><a href="javascript:;">配件</a></div>
+								<div class="col-3 tx-c"><a href="javascript:;">配件</a></div>
+								<div class="col-3 tx-c"><a href="javascript:;">配件</a></div>
+								<div class="col-3 tx-c"><a href="javascript:;">配件</a></div>
+								<div class="col-3 tx-c"><a href="javascript:;">配件</a></div>
+								<div class="col-3 tx-c"><a href="javascript:;">配件</a></div>
+								<div class="col-3 tx-c"><a href="javascript:;">配件</a></div>
+								<div class="col-3 tx-c"><a href="javascript:;">配件</a></div>
+								<div class="col-3 tx-c"><a href="javascript:;">配件</a></div>
 							</div>
 						</div>
 					</div>
@@ -281,13 +322,16 @@
                     }); 
 
 		
-		$(".js-peijian").click(function(){
+		$(".js-pop").click(function(){
+			var trigger = $(this).data("trigger");
 			if($(this).hasClass("open")){
-				$(".peijian").hide();
+				$("." + trigger).hide();
 				$(this).closest(".col-3").removeClass("now");
 				$(this).removeClass("open");
 			} else {
-				$(".peijian").show();
+				$(".grid-list").hide();
+				$("." + trigger).show();
+				$(this).closest(".col-3").siblings(".col-3").removeClass("now");
 				$(this).closest(".col-3").addClass("now");
 				$(this).addClass("open");
 			}
