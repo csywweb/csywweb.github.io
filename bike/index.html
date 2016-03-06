@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport"/>
+	<meta name="format-detection" content="telephone=no" />
+	<title>湖南路翔电动车电子商务平台</title>
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+	<link rel="stylesheet" type="text/css" href="styles/swiper.min.css">
+	<script type="text/javascript" src="scripts/jquery.js"></script>
+	<script src="scripts/swiper.min.js"></script>
+	<script type="text/javascript">
+	var rem = window.innerWidth/3.2;
+		function init(){
+			document.documentElement.style.fontSize = window.innerWidth/3.2 + 'px';
+			var height = $(window).height();
+			$("body").height(height);
+			$("main").height(height);
+
+			console.log($(".grid-menu").height() )
+			var height1 = -($(".grid-menu").height() +  0.15*rem);
+			$(".grid-list").css("bottom", height1);
+		}
+	</script>
+</head>
+<body onload="init()">
+	<main class="ub ub-ver index">
+		<!-- 内容 -->
+		<div class="ub-f1 container">
+			<div class="ub-con">
+				<!-- 顶部 -->
+				<div class="top">
+					<div class="col-12 grid-call">
+						<div class="col-6 tx-c">
+							<span class="bg-size call"></span>
+							招商热线：0731-82508591
+						</div>
+						<div class="col-6 tx-c">
+							<span class="bg-size call"></span>
+							销售热线：0731-82508591
+						</div>
+					</div>
+					<div class="search-warp">
+						<div class="search-box">
+							<input class="bk" type="text" placeholder="输入电动车品牌或车型">
+							<div class="btn-search"></div>
+						</div>
+					</div>
+				</div>
+				<!-- banner start -->
+				<div class="swiper-container swiper-container-horizontal" style="width:100%;">
+		            <div class="swiper-wrapper">
+		                <div class="swiper-slide"><img src="images/banner-1.jpg" /></div>
+		                <div class="swiper-slide"><img src="images/banner-1.jpg" /></div>
+		            </div>
+		            <!-- Add Pagination -->
+		            <div class="swiper-pagination swiper-pagination-clickable"></div>
+		        </div>
+				<!-- banner end -->
+				<!-- 分类 start -->
+				<div class=" grid-menu">
+					<div class="relative col-12">
+						<div class="col-3">
+							<div class="item js-peijian"><img src="images/icon-peijian.png"></div>
+							<p class="tx-c">配件</p>
+						</div>
+						<div class="col-3">
+							<div class="item"><img src="images/icon-zhengche.png"></div>
+							<p class="tx-c">整车</p>
+						</div>
+						<div class="col-3">
+							<div class="item"><img src="images/icon-diy.png"></div>
+							<p class="tx-c">DIY</p>
+						</div>
+						<div class="col-3">
+							<div class="item"><img src="images/icon-shop.png"></div>
+							<p class="tx-c">店铺</p>
+						</div>
+						<!-- 浮动二级菜单 -->
+						<div class="grid-list peijian">
+							<div class="triangle"></div>
+							<div class="col-12">
+								<div class="col-3 tx-c"><a href="javascript:;">头盔</a></div>
+								<div class="col-3 tx-c"><a href="javascript:;">手套</a></div>
+								<div class="col-3 tx-c"><a href="javascript:;">眼镜</a></div>
+								<div class="col-3 tx-c"><a href="javascript:;">车锁</a></div>
+								<div class="col-3 tx-c"><a href="javascript:;">车灯</a></div>
+								<div class="col-3 tx-c"><a href="javascript:;">车铃</a></div>
+								<div class="col-3 tx-c"><a href="javascript:;">车篮</a></div>
+								<div class="col-3 tx-c"><a href="javascript:;">打气筒</a></div>
+								<div class="col-3 tx-c"><a href="javascript:;">骑行包</a></div>
+								<div class="col-3 tx-c"><a href="javascript:;">后货架</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 分类 end -->
+				<!-- 新闻 start -->
+				<div class="grid-news ub">
+					<div class="title-pic"></div>
+					<div class="ub-f1 desc">
+						<p class="ut-s">热烈庆祝新版本商城上线</p>
+						<p class="ut-s">热点新闻紫薯补丁紫薯补丁紫薯补丁</p>
+					</div>
+				</div>
+				<!-- 新闻 end -->
+				<!-- 品牌列表 -->
+				<section  class="uof">
+					<div class="head relative">
+						<span class="title">上海立马</span><img src="images/lima-logo.png" class="lima-logo logo">
+						<img src="images/icon-dot.jpg" class="dot" >
+					</div>
+					<img src="images/lima-slide.jpg" class="bk slide" >
+					<div class="col-12">
+						<!-- 这里干脆把文字和图放一起了。。 弄起来好麻烦 -->
+						<div class="col-6 uof bor-r">
+							<img src="images/lima-1.jpg" class="bk" alt="">
+						</div>
+						<div class="col-6 uof">
+							<div class="uof bor-b">
+								<img src="images/lima-2.jpg" class="bk"  alt="">
+							</div>
+							<div class="uof">
+								<img src="images/lima-3.jpg" class="bk"  alt="">
+							</div>
+						</div>
+					</div>
+				</section>
+				<section  class="uof">
+					<div class="head relative">
+						<span class="title">GBG酷车</span><img src="images/gbg-logo.png" class=" logo">
+						<img src="images/icon-dot.jpg" class="dot" >
+					</div>
+					<img src="images/gbg-slide.jpg" class="bk slide" >
+					<div class="col-12">
+						<!-- 这里干脆把文字和图放一起了。。 弄起来好麻烦 -->
+						<div class="col-6 uof bor-r">
+							<img src="images/gbg-1.jpg" class="bk" alt="">
+						</div>
+						<div class="col-6 uof">
+							<div class="uof bor-b">
+								<img src="images/gbg-2.jpg" class="bk"  alt="">
+							</div>
+							<div class="uof">
+								<img src="images/gbg-3.jpg" class="bk"  alt="">
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="uof">
+					<div class="head relative">
+						<span class="title">彪牌电动车</span><img src="images/biaopai-logo.png" class="logo">
+						<img src="images/icon-dot.jpg" class="dot" >
+					</div>
+					<img src="images/biaopai-slide.jpg" class="bk slide" >
+					<div class="col-12">
+						<!-- 这里干脆把文字和图放一起了。。 弄起来好麻烦 -->
+						<div class="col-6 uof bor-r">
+							<img src="images/biaopai-1.jpg" class="bk" alt="">
+						</div>
+						<div class="col-6 uof">
+							<div class="uof bor-b">
+								<img src="images/biaopai-2.jpg" class="bk"  alt="">
+							</div>
+							<div class="uof">
+								<img src="images/biaopai-3.jpg" class="bk"  alt="">
+							</div>
+						</div>
+					</div>
+				</section>
+				<section  class="uof">
+					<div class="head relative">
+						<span class="title">雅迪电动车</span><img src="images/yadi-logo.jpg" class="logo">
+						<img src="images/icon-dot.jpg" class="dot" >
+					</div>
+					<img src="images/lima-slide.jpg" class="bk slide" >
+					<div class="col-12">
+						<!-- 这里干脆把文字和图放一起了。。 弄起来好麻烦 -->
+						<div class="col-6 uof bor-r">
+							<img src="images/lima-1.jpg" class="bk" alt="">
+						</div>
+						<div class="col-6 uof">
+							<div class="uof bor-b">
+								<img src="images/lima-2.jpg" class="bk"  alt="">
+							</div>
+							<div class="uof">
+								<img src="images/lima-3.jpg" class="bk"  alt="">
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<!-- 底部 -->
+		<div class="footer">
+			<div class="col-3">
+				<a href="javascript:;" class="tx-c">
+					<img src="images/icon-index.png" alt="">
+					<p>首页</p>
+				</a></div>
+			<div class="col-3">
+				<a href="javascript:;" class="tx-c">
+					<img src="images/icon-item.png" alt="">
+					<p>分类</p>
+				</a></div>
+			<div class="col-3">
+				<a href="javascript:;" class="tx-c">
+					<img src="images/icon-cart.png" alt="">
+					<p>购物车</p>
+				</a></div>
+			<div class="col-3">
+				<a href="javascript:;" class="tx-c">
+					<img src="images/icon-center.png" alt="">
+					<p>个人中心</p>
+				</a></div>
+		</div>
+	</main>
+<script>
+	$(function(){
+		var swiper = new Swiper('.swiper-container', {
+                        pagination: '.swiper-pagination',
+                        paginationClickable: true
+                    }); 
+
+		initStyle();
+		$(".js-peijian").click(function(){
+			if($(this).hasClass("open")){
+				$(".peijian").hide();
+				$(this).closest(".col-3").removeClass("now");
+				$(this).removeClass("open");
+			} else {
+				$(".peijian").show();
+				$(this).closest(".col-3").addClass("now");
+				$(this).addClass("open");
+			}
+		})
+
+	})
+	function initStyle(){
+		
+	}
+</script>
+</body>
+</html>
