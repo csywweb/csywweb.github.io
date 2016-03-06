@@ -167,7 +167,9 @@ select { display: block; width: 100%; }
 
 .index .grid-menu .grid-list a:visted, .index .grid-menu .grid-list a:actived { color: #FFF; }
 
-.index .grid-menu .grid-list .triangle { display: inline-block; width: 0; height: 0; overflow: hidden; line-height: 0; font-size: 0; vertical-align: middle; border-bottom: 7px solid #373737; border-top: 0 none; border-left: 7px solid transparent; border-right: 7px solid transparent; position: absolute; top: -7px; left: 11%; }
+.index .grid-menu .grid-list .triangle { display: inline-block; width: 0; height: 0; overflow: hidden; line-height: 0; font-size: 0; vertical-align: middle; border-bottom: 7px solid #373737; border-top: 0 none; border-left: 7px solid transparent; border-right: 7px solid transparent; position: absolute; top: -7px; }
+
+.index .grid-menu .peijian .triangle { left: 11%; }
 
 .index .grid-news { background-color: #FFF; padding: 0.1rem 0.15rem; border-top: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; }
 
@@ -195,9 +197,9 @@ select { display: block; width: 100%; }
 
 .index .brand-list .img-list { padding-bottom: 0.15rem; }
 
-.index .brand-list h2 { font-size: 0.16rem; font-weight: 800; }
+.index .brand-list h2 { font-size: 0.15rem; font-weight: 800; }
 
-.index .brand-list h3 { font-size: 0.14rem; }
+.index .brand-list h3 { font-size: 0.13rem; }
 
 .index .brand-list .right h2, .index .brand-list .right h3 { position: absolute; }
 
@@ -206,6 +208,8 @@ select { display: block; width: 100%; }
 .index .brand-list .right h3 { top: 0.22rem; left: 0.05rem; }
 
 .index .brand-list .right img { width: 0.8rem; height: 0.6rem; display: block; float: right; }
+
+.index .brand-list .left h2 { margin-top: 0.05rem; }
 
 .index .brand-list .left img { width: 1.4rem; height: 0.9rem; }
 
