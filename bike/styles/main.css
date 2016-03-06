@@ -169,9 +169,9 @@ select { display: block; width: 100%; }
 
 .index .grid-menu .grid-list .triangle { display: inline-block; width: 0; height: 0; overflow: hidden; line-height: 0; font-size: 0; vertical-align: middle; border-bottom: 7px solid #373737; border-top: 0 none; border-left: 7px solid transparent; border-right: 7px solid transparent; position: absolute; top: -7px; }
 
-.index .grid-menu .zhengche .triangle { left: 11%; }
+.index .grid-menu .zhengche .triangle { left: 35%; }
 
-.index .grid-menu .peijian .triangle { left: 35%; }
+.index .grid-menu .peijian .triangle { left: 11%; }
 
 .index .grid-menu .shop .triangle { left: 85%; }
 
