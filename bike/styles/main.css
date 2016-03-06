@@ -157,7 +157,7 @@ select { display: block; width: 100%; }
 
 .index .grid-menu .item img { display: block; width: 100%; }
 
-.index .grid-menu .now span { color: #EC3351; font-weight: 800; }
+.index .grid-menu .now span { color: #EC3351; font-weight: 800; border: 1px solid #EC3351; }
 
 .index .grid-menu span { font-size: 0.14rem; }
 
