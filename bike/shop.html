@@ -46,10 +46,26 @@
 				<div class="shop-title relative">
 					<img src="images/logo-title.jpg" alt="" class="logo">
 					<div class="title-desc">
-						<p class="ut-s">小刀官方旗舰店</p>
+						<p class="ut-s">小刀官方旗舰店啊啊啊啊</p>
 						<p class="ut-s">共29件商品</p>
 					</div>
-					<a class="btn-other" href="javascript:;">查看其它经销商</a>
+					<div class="btn-other" href="javascript:;">
+						查看其它经销商
+					</div>
+					<div class="more-list">
+						<div class="triangle"></div>
+						<div class="col-12">
+							<div class="col-3 tx-c"><a href="javascript:;">立马</a></div>
+							<div class="col-3 tx-c"><a href="javascript:;">BGB酷车</a></div>
+							<div class="col-3 tx-c"><a href="javascript:;">狮龙</a></div>
+							<div class="col-3 tx-c"><a href="javascript:;">彪牌</a></div>
+							<div class="col-3 tx-c"><a href="javascript:;">雅迪</a></div>
+							<div class="col-3 tx-c"><a href="javascript:;">新日</a></div>
+							<div class="col-3 tx-c"><a href="javascript:;">奥娃</a></div>
+							<div class="col-3 tx-c"><a href="javascript:;">爱玛</a></div>
+							<div class="col-3 tx-c"><a href="javascript:;">五本</a></div>
+						</div>
+					</div>
 				</div>
 				<!-- 标题 end -->
 				<!-- 分类 -->
@@ -186,6 +202,8 @@
 	</div>   
 <script>
 	$(function(){
+		
+
 		$(".icon-down").click(function(){
 			//如果菜单打开
 			if($(this).hasClass("open")){
@@ -200,6 +218,10 @@
 				$(".ctx").addClass("shadow")
 			}
 			//$(".all").removeClass("none");
+		})
+
+		$(".btn-other").click(function(){
+			$(".more-list").toggle();
 		})		
 	})
 </script>
