@@ -284,9 +284,9 @@ select { display: block; width: 100%; }
 .shop .grid-list .ctx .desc { padding: 0 0.075rem; }
 
 /* 更多经销商 */
-.more-list { display: none; padding: 0.1rem; z-index: 100; position: absolute; border-radius: 0.08rem; left: 5%; width: 90%; top: 0.45rem; background-color: #373737; }
+.more-list { display: none; padding: 0.1rem; padding-top: 0.2rem; z-index: 100; position: absolute; border-radius: 0.08rem; left: 5%; width: 90%; top: 0.45rem; background-color: #373737; }
 
-.more-list a { color: #FFF; display: inline-block; margin-bottom: 0.1rem; }
+.more-list a { color: #FFF; display: inline-block; margin-bottom: 0.1rem; line-height: 0.2rem; }
 
 .more-list a:visted, .more-list a:actived { color: #FFF; }
 
