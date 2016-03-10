@@ -53,51 +53,53 @@
 				</div>
 				<!-- 标题 end -->
 				<!-- 分类 -->
-				<div class="spec ub">
-					<p>分类:</p>
-					<div class="ub-f1">
-						<div class="col-12">
-							<div class="col-3">
-								<a href="javascript:;">尾灯</a>
-							</div>
-							<div class="col-3">
-								<a href="javascript:;">电池</a>
-							</div>
-							<div class="col-3">
-								<a href="javascript:;">前叉</a>
-							</div>
-							<div class="col-3">
-								<a href="javascript:;">轮胎</a>
-							</div>
-							<div class="col-12 none other">
+				<div class="spec show-all">
+					<div class="ub ctx">
+						<p>分类:</p>
+						<div class="ub-f1">
+							<div class="col-12">
 								<div class="col-3">
-									<a href="javascript:;">车架</a>
+									<a href="javascript:;">尾灯</a>
 								</div>
 								<div class="col-3">
-									<a href="javascript:;">车筐</a>
+									<a href="javascript:;">电池</a>
 								</div>
 								<div class="col-3">
-									<a href="javascript:;">包围</a>
+									<a href="javascript:;">前叉</a>
 								</div>
 								<div class="col-3">
-									<a href="javascript:;">大灯</a>
+									<a href="javascript:;">轮胎</a>
 								</div>
-								<div class="col-3">
-									<a href="javascript:;">转向灯</a>
-								</div>
-								<div class="col-3">
-									<a href="javascript:;">充电器</a>
-								</div>
-								<div class="col-3">
-									<a href="javascript:;">挡泥板</a>
-								</div>
-								<div class="col-3">
-									<a href="javascript:;">刹车</a>
+								<div class="col-12 none other">
+									<div class="col-3">
+										<a href="javascript:;">车架</a>
+									</div>
+									<div class="col-3">
+										<a href="javascript:;">车筐</a>
+									</div>
+									<div class="col-3">
+										<a href="javascript:;">包围</a>
+									</div>
+									<div class="col-3">
+										<a href="javascript:;">大灯</a>
+									</div>
+									<div class="col-3">
+										<a href="javascript:;">转向灯</a>
+									</div>
+									<div class="col-3">
+										<a href="javascript:;">充电器</a>
+									</div>
+									<div class="col-3">
+										<a href="javascript:;">挡泥板</a>
+									</div>
+									<div class="col-3">
+										<a href="javascript:;">刹车</a>
+									</div>
 								</div>
 							</div>
 						</div>
+						<div class="icon-down angle"></div>
 					</div>
-					<div class="icon-down angle"></div>
 					<!-- 所有分类 -->
 				</div>
 				<!-- 分类 end-->
@@ -190,15 +192,15 @@
 				$(".other").hide();
 				$(".icon-down").removeClass("icon-up");
 				$(this).removeClass("open");
+				$(".ctx").removeClass("shadow")
 			} else {
 				$(".other").show();	
 				$(".icon-down").addClass("icon-up");
 				$(this).addClass("open");
+				$(".ctx").addClass("shadow")
 			}
 			//$(".all").removeClass("none");
-		})
-
-		
+		})		
 	})
 </script>
 </body>

@@ -237,7 +237,7 @@ select { display: block; width: 100%; }
 
 .shop .shop-title .btn-other { color: #FFF; background-color: #EC3351; font-size: 12px; border-radius: 6px; position: absolute; display: block; width: 1rem; height: 0.25rem; line-height: 0.25rem; text-align: center; top: 0.1rem; right: 0.1rem; }
 
-.shop .spec { background-color: #F4F4F4; padding: 0.08rem 0.1rem; border-top: 1px solid #DDD; border-bottom: 1px solid #DDD; /* height:0.36rem; */ position: relative; }
+.shop .spec { background-color: #F4F4F4; border-top: 1px solid #DDD; border-bottom: 1px solid #DDD; height: 0.36rem; position: relative; }
 
 .shop .spec p { color: #666; line-height: 0.2rem; }
 
@@ -260,6 +260,10 @@ select { display: block; width: 100%; }
 .shop .spec .other .col-3 { margin-top: 0.1rem; }
 
 .shop .spec .none { display: none; }
+
+.shop .show-all .ctx { padding: 0.08rem 0.1rem; position: absolute; width: 100%; z-index: 99; background-color: #F4F4F4; }
+
+.shop .show-all .shadow { border-bottom: 1px solid #DDD; box-shadow: 0px 2px 3px 0px #ddd; }
 
 .shop .grid-list { margin-top: 0.1rem; padding: 0 0.05rem; }
 
