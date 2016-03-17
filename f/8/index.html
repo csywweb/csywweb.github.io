@@ -65,6 +65,13 @@
             return n;
         }
     }());
+setTimeout(function repeat(){
+    /* Some Long block of code... */
+    setTimeout(repeat, 10)
+}, 10)
+setInterval(function(){
+    /* Some Long block of code... */
+}, 10)
 </script>
 </body>
 </html>
