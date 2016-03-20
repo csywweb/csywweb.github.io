@@ -60,7 +60,9 @@ a {
   -ms-transition:all .5s;
 }
 .list li a:hover{
-  background-color: #660099;
+  /* background-color: #660099; */
+  background:-webkit-gradient(linear, 0 0, 0 100%, from(#660099), to(#6699CC));
+  background:-moz-linear-gradient(top, #660099,#6699CC);
   color:#FFFFFF;
   padding-left: 40px;
 }
