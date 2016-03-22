@@ -1,0 +1,276 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors csy (you@example.org)
+ * @date    2014-12-06 12:26:58
+ * @version $Id$
+ */
+ /* 
+  *   页面翻转动画
+  *
+  *
+  */
+@-webkit-keyframes toTop{
+	from{}
+	to{
+		-webkit-transform:translateY(-100%);
+	}
+}
+@-webkit-keyframes toBottom{
+	from{}
+	to{
+		-webkit-transform:translateY(100%);
+	}
+}
+@-webkit-keyframes fromBottom{
+	from{
+		-webkit-transform:translateY(-100%);
+	}
+}
+@-webkit-keyframes fromTop{
+	from{
+		-webkit-transform:translateY(100%);
+	}
+}
+@-webkit-keyframes scale{
+	to{
+		-webkit-transform: scale(0.92);
+	}
+}
+@-webkit-keyframes icon{
+	0%{
+		opacity: 0;
+		bottom:15px;
+	}
+	50%{
+		opacity: 1;
+		bottom:30px;
+	}
+	100%{
+		bottom: 50px;
+		opacity: 0;
+	}
+}
+
+.toTop{
+	-webkit-animation:toTop 1s ease both;
+}
+
+.toBottom{
+	-webkit-animation:toBottom 1s ease both;
+}
+
+.fromTop{
+	-webkit-animation:fromTop 1s ease both;
+}
+.fromBottom{
+	-webkit-animation:fromBottom 1s ease both;
+}
+.icon{
+	-webkit-animation:icon 2s ease-in-out infinite; 
+}
+
+/* 
+ *  页面内部动画
+ *
+ */
+@-webkit-keyframes move{
+    50%{
+        -webkit-transform:translateY(70px);
+    }
+    100%{
+        -webkit-transform:translateY(0px);
+    }
+
+
+}
+@-webkit-keyframes title{
+	0%{
+		-webkit-transform:translateY(-20%);
+	}
+	90%{
+		-webkit-transform:translateY(2%);
+	}
+}
+
+@-webkit-keyframes left{
+	from{
+		-webkit-transform:translateX(-40%);
+		opacity:0;
+	}
+}
+
+@-webkit-keyframes right{
+	from{
+		-webkit-transform:translateX(100%);
+	}
+}
+@-webkit-keyframes down{
+	from{
+        -webkit-transform:translateY(30%);
+        opacity: 0;
+    }
+}
+@-webkit-keyframes top{
+    from{
+        -webkit-transform:translateY(-40%);
+        opacity: 0;
+    }
+}
+@-webkit-keyframes opacity{
+	from{
+		opacity: 0;
+	}
+}
+@-webkit-keyframes amazing-1{
+    0%{
+        -webkit-transform: translateX(-50%);
+        opacity: 0;
+    }
+    25%{
+        -webkit-transform:translateX(0);
+        opacity: 1;
+    }
+    65%{
+        -webkit-transform:translateY(0px);
+    }
+    100%{
+        -webkit-transform:translateY(-100%);
+    }
+}
+@-webkit-keyframes amazing-2{
+    0%{
+        -webkit-transform: translateX(-50%);
+        opacity: 0;
+    }
+    30%{
+        -webkit-transform:translateX(0);
+        opacity: 1;
+    }
+    60%{
+        -webkit-transform:translateY(0px);
+    }
+    100%{
+        -webkit-transform:translateY(100%); 
+    }
+    
+}
+@-webkit-keyframes scale{
+    0%{
+        -webkit-transform:scale(0.6);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        -webkit-transform:scale(1);
+    }
+}
+@-webkit-keyframes rotate{
+    to{
+        -webkit-transform:rotate(100deg);
+        opacity: 0; 
+    }
+}
+@-webkit-keyframes hidden{
+    to{
+        opacity: 0;
+    }
+}
+.hidden{
+    -webkit-animation:hidden .6s ease-in-out both;
+}
+.rotate{
+    -webkit-animation:rotate 1s ease-in-out both;
+}
+.amazing-1{
+    -webkit-animation:amazing-1 4s ease-in-out both;
+}
+.amazing-2{
+    -webkit-animation:amazing-2 3s ease-in-out both;
+}
+.scale{
+    -webkit-animation:scale 1s ease-in-out both;
+}
+.top{
+	-webkit-animation:top .8s ease-in-out both;
+}
+.opacity{
+    -webkit-animation:opacity 1.2s linear both;
+}
+.left{
+    -webkit-animation:left 0.8s linear both;
+}
+.right{
+    -webkit-animation:right 1.2s linear both;
+}
+.down{
+    -webkit-animation:down 1.2s linear both;
+}
+.delay-1-2{
+    -webkit-animation-delay:0.8s;
+}
+.delay-2-4{
+    -webkit-animation-delay:2s;
+}
+.delay-3-6{
+    -webkit-animation-delay:3s;
+}
+.delay-4{
+    -webkit-animation-delay:3.8s;
+}
+.delay-0-6{
+    -webkit-animation-delay:.6s;
+}
+/*
+* loading 页面动画
+*/
+.spinner {
+    margin: 200px auto;
+    width: 80px;
+    height: 80px;
+    position: relative;
+    text-align: center;
+
+    -webkit-animation: rotate 2.0s infinite linear;
+    animation: rotate 2.0s infinite linear;
+}
+
+.dot1, .dot2 {
+    width: 40%;
+    height: 40%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    background-color: #C30E28;
+    border-radius: 100%;
+
+    -webkit-animation: bounce 2.0s infinite ease-in-out;
+    animation: bounce 2.0s infinite ease-in-out;
+}
+
+.dot2 {
+    top: auto;
+    bottom: 0px;
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+@-webkit-keyframes rotate {
+    100% { -webkit-transform: rotate(360deg) }
+}
+@keyframes rotate { 100% { transform: rotate(360deg); -webkit-transform: rotate(360deg) }}
+
+@-webkit-keyframes bounce {
+    0%, 100% { -webkit-transform: scale(0.0) }
+    50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    } 50% {
+          transform: scale(1.0);
+          -webkit-transform: scale(1.0);
+      }
+}

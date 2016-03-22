@@ -1,0 +1,51 @@
+﻿
+/**
+ * 
+ * @authors csy (you@example.org)
+ * @date    2014-12-06 12:26:31
+ * @version $Id$
+ */
+*{
+	padding: 0;
+	margin:0;
+}
+.current{
+	z-index: 10;
+}
+body{
+	max-width: 640px;
+	min-width: 320px;
+
+}
+.page{
+	position: absolute;
+	overflow: hidden;
+    background-size: 100% 100%;
+}
+
+.delay{
+	top:-15px;
+}
+.icon{
+	position: fixed;
+	z-index: 15;
+	width:16px;
+	height:10px;
+	bottom:30px;
+    margin-left:-8px;
+	left:50%; 
+	background:url("../images/link.png");
+}
+.load{
+	position: absolute;
+	z-index: 80;
+	top:0;
+	background: #FFFFFF;
+}
+
+.hide{display: none !important;}
+.page-content{
+	background-size: 100% 100%;
+	position: absolute;
+	background-repeat: no-repeat;    
+}
