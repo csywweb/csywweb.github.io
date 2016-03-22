@@ -61,7 +61,7 @@
 		width: 10px;
 		height: 10px;
 	}
-	.nav ul li a.hover{
+	.nav ul li.hover a{
 		background-color: #999;
 	}
 	.btn b{
@@ -87,7 +87,7 @@
 </head>
 <body>
     <div class="slider">
-    	<div class="cont">
+    	<div class="cont" id="cont">
     		<ul class="slide-body" id="slide-body">
     			<li><img src="images/1.jpg" alt=""></li>
     			<li><img src="images/2.jpg" alt=""></li>
@@ -95,33 +95,123 @@
     			<li><img src="images/4.jpg" alt=""></li>
     		</ul>
     		<div class="nav">
-    			<ul>
-    				<li><a href="javascript:;"></a></li>
+    			<ul id="progress">
+    				<li class="hover"><a href="javascript:;"></a></li>
     				<li><a href="javascript:;"></a></li>
     				<li><a href="javascript:;"></a></li>
     				<li><a href="javascript:;"></a></li>
     			</ul>
     		</div>
-    		<div class="btn">
+    		<div class="btn" id="btn-group">
     			<b class="left"><</b>
     			<b class="right">></b>
     		</div>
     	</div>
     </div>
     <script>
-    	var prev = document.getElementsByTagName("b")[0],
-    		next = document.getElementsByTagName("b")[1],
-    		ul   = document.getElementById("slide-body");
-    		page = 4,
-    		li_w = ul.getElementsByTagName("li")[0].offsetWidth,
-    		ul.innerHTML += ul.innerHTML,
-    		time = null,
-    		now  = 0;
+    	var prev  = document.getElementsByTagName("b")[0],
+    		next  = document.getElementsByTagName("b")[1],
+    		progre= document.getElementById("progress"),
+    		cont  = document.getElementById("cont"),
+    		point = progre.getElementsByTagName("li"),
+    		btn   = document.getElementById("btn-group"),
+    		ul    = document.getElementById("slide-body"),
+    		page  = 8,
+    		half  = page/2,
+    		li_w  = ul.getElementsByTagName("li")[0].offsetWidth,
+    		time  = null,
+    		now   = 0;
 
-    	ul.style.width = li_w*page*2;
+    	ul.innerHTML += ul.innerHTML;
+    	ul.style.width = li_w*page + "px";
+
+    	//自動輪播
+		function auto(){
+		    next.onclick();
+		}
+		timer = setInterval(auto, 3000);
+
+		cont.onmouseover = function(){
+			clearInterval(timer);
+			btn.style.block = "block";
+		}
+
+		cont.onmouseout = function(){
+			timer = setInterval(auto, 3000);
+			btn.style.block = "none";
+		}
+
+
+
+
+
     	next.onclick = function(){
-    		
+    		console.log("now: ", now);
+    		if(now < page - 1){
+    			now++;
+    		} else {
+    			now = half;
+                ul.style.left = -(li_w * (half - 1)) + 'px';
+    		}
+
+    		scroll();
     	}
+		prev.onclick = function(){
+		    if(now > 0){
+		        now--;
+		    } else {
+		        now = half - 1;
+		        ul.style.left = -(li_w * half) + 'px';
+		    }
+		    scroll();
+		}
+
+    	function scroll(){
+    		nav();
+    		act(ul, 'left', -li_w * now);
+    	}
+
+    	//進度條
+    	function nav(){
+    		var str = now;
+    		for(var i = 0; i < 4; i++){
+    			point[i].className = "";
+    		}
+    		console.log(now/2);
+    		console.log(Math.ceil(now/2));
+    		if(now > 3){
+    			str = now - 4;
+    		}
+    		point[str].className = "hover";
+    	}
+
+    	function css(obj, attr){
+            if(obj.currentStyle){
+                return obj.currentStyle[attr];			//for ie
+            } else {
+                return getComputedStyle(obj, false)[attr];
+            }
+        }
+
+    	function act(obj, attr, target, fn){
+    		obj.timer && clearInterval(obj.timer);
+            obj.timer = setInterval(function(){
+                var stop 	= true;
+                var cur  	= parseInt(css(obj, attr));
+                var speed 	= (target - cur) / 10;
+                speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+                if(target != cur){
+                    stop = false;
+                    obj.style[attr] = speed + cur + 'px';
+                }
+                if(stop){
+                    clearInterval(obj.timer);
+                    obj.timer = null;
+                    fn && fn();
+                }
+            }, 30);
+    	}
+
     </script>
 </body>
 </html>
