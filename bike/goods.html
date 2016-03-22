@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<meta content="width=device-width initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport"/>
+	<meta name="format-detection" content="telephone=no" />
+	<title>商品详情</title>
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+	<link rel="stylesheet" type="text/css" href="styles/swiper.min.css">
+	<script type="text/javascript" src="scripts/jquery.js"></script>
+	<script src="scripts/swiper.min.js"></script>
+	<script type="text/javascript">
+	var rem = window.innerWidth/3.2;
+		function init(){
+			document.documentElement.style.fontSize = window.innerWidth/3.2 + 'px';
+			
+
+			//console.log($(".grid-menu").height() )
+			var height1 = -($(".grid-menu").height() +  0.3*rem + 10);
+			$(".grid-list").css("bottom", height1);
+		}
+	</script>
+</head>
+<body onload="init()">
+	<main class="goods">
+		<!-- banner start -->
+		<div class="swiper-container swiper-container-horizontal" style="width:100%;">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/banner-2.jpg" /></div>
+                <div class="swiper-slide"><img src="images/banner-2.jpg" /></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination swiper-pagination-clickable"></div>
+        </div>
+		<!-- banner end -->
+		<p class="goods-name tx-c">
+			新款大龟王72v电动车60v电摩祖玛摩托车改装踏板电动1000w电瓶车
+		</p>
+	</main>
+<script>
+	$(function(){
+		var swiper = new Swiper('.swiper-container', {
+                        pagination: '.swiper-pagination',
+                        paginationClickable: true
+                    }); 
+	})
+</script>
+</body>
+</html>

@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>首页</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<link rel="stylesheet" href="styles/bootstrap.min.css">
+<link rel="stylesheet" href="styles/common.css">
+<link rel="stylesheet" href="styles/index.css">
+<script src="scripts/jquery.min.js"></script>
+</head>
+<body>
+<div class="fixed-bar">
+	<!-- 工具条 -->
+	<div class="mui-bar">
+		<div class="shop-cart mui-cart-btn mui-cart-hover">
+			<div class="mui-cart-ctx">
+				<span class="glyphicon glyphicon-shopping-cart"></span>
+				<div class="cate-btn ">购物车</div>
+				<span class="badge mui-cart-num">4</span>
+			</div>
+		</div>
+		<div class="mui-like ">
+			<a href="javascript:;" class="glyphicon glyphicon-heart mui-tool" title="我的关注"></a>
+		</div>
+		<div class="mui-collect">
+			<a href="javascript:;" class="glyphicon glyphicon-star-empty mui-tool" title="我的收藏"></a>
+		</div>
+		<div class="mui-top">
+			<p>top</p>
+			<a href="#" class="glyphicon glyphicon-arrow-up mui"></a>
+		</div>
+	</div>
+	<!--  购物车 -->
+	<div class="grid-cart bar-grid-cart">
+		<div>
+			<label class="all">
+		      	<input type="checkbox" class="radio-all">全选
+		    </label>
+		    <a href="javascript:;" class="see-all">查看全部</a>
+		</div>
+		<!--- 购物车为空显示的消息 不为空的时候让他display none就好 后面要用到  -->
+		<p style="text-align:center;padding:40px 0;display:none;" class="null-tip">购物车为空</p>
+		<!-- 一个店铺 -->
+		<div class="cart-item">
+			<div class="cart-item-title">
+				<div class="bk-radio"><label for=""><input type="checkbox" class="radio-shop"></label></div>
+				<div class="title-name">xxx专营店</div>
+			</div>
+			<!-- 商品 -->
+			<div class="goods-list" data-checked="false">
+				<div class="bk-radio"><label for=""><input type="checkbox" class="radio-goods"></label></div>
+				<div class="goods-desc">
+					<img src="images/goods.jpg" alt="" class="goods-img">
+					<div class="goods-detail">
+						<p title="颜色：xxx">蓝色</p>
+						<p title="尺码: xxl">XXL</p>
+					</div>
+					<div class="goods-num">
+						<div class="add glyphicon glyphicon-plus mui-btn"></div>
+						<div class="num">1</div>
+						<div class="min glyphicon glyphicon-minus mui-btn"></div>
+					</div>
+					<div class="goods-price">
+						<span class='glyphicon glyphicon-remove js-remove  mui-btn'></span><p>1900</p>
+					</div>
+				</div>
+			</div>
+			<!--  一个商品 结束 -->
+			<div class="goods-list" data-checked="false">
+				<div class="bk-radio"><label for=""><input type="checkbox" class="radio-goods"></label></div>
+				<div class="goods-desc">
+					<img src="images/goods.jpg" alt="" class="goods-img">
+					<div class="goods-detail">
+						<p title="颜色：xxx">蓝色</p>
+						<p title="尺码: xxl">XXL</p>
+					</div>
+					<div class="goods-num">
+						<div class="add glyphicon glyphicon-plus mui-btn"></div>
+						<div class="num">1</div>
+						<div class="min glyphicon glyphicon-minus mui-btn"></div>
+					</div>
+					<div class="goods-price">
+						<span class='glyphicon glyphicon-remove js-remove  mui-btn'></span><p>1900</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 一个店铺end -->
+		<div class="cart-item">
+			<div class="cart-item-title">
+				<div class="bk-radio"><label for=""><input type="checkbox" class="radio-shop"></label></div>
+				<div class="title-name">xxx专营店</div>
+			</div>
+			<!-- 商品 -->
+			<div class="goods-list"  data-checked="false">
+				<div class="bk-radio"><label for=""><input type="checkbox" class="radio-goods"></label></div>
+				<div class="goods-desc">
+					<img src="images/goods.jpg" alt="" class="goods-img">
+					<div class="goods-detail">
+						<p title="颜色：xxx">蓝色</p>
+						<p title="尺码: xxl">XXL</p>
+					</div>
+					<div class="goods-num">
+						<div class="add glyphicon glyphicon-plus mui-btn"></div>
+						<div class="num">1</div>
+						<div class="min glyphicon glyphicon-minus mui-btn"></div>
+					</div>
+					<div class="goods-price">
+						<span class='glyphicon glyphicon-remove js-remove  mui-btn'></span><p>1900</p>
+					</div>
+				</div>
+			</div>
+			<!--  一个商品 结束 -->
+			<div class="goods-list"  data-checked="false">
+				<div class="bk-radio"><label for=""><input type="checkbox" class="radio-goods"></label></div>
+				<div class="goods-desc">
+					<img src="images/goods.jpg" alt="" class="goods-img">
+					<div class="goods-detail">
+						<p title="颜色：xxx">蓝色</p>
+						<p title="尺码: xxl">XXL</p>
+					</div>
+					<div class="goods-num">
+						<div class="add glyphicon glyphicon-plus mui-btn"></div>
+						<div class="num">1</div>
+						<div class="min glyphicon glyphicon-minus mui-btn"></div>
+					</div>
+					<div class="goods-price">
+						<span class='glyphicon glyphicon-remove js-remove  mui-btn'></span><p>1900</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 结算按钮 -->
+		<div class="grid-handle">
+			<div class="tip-text">
+				<p>请选择商品</p>
+			</div>
+			<div class="grid-cart-detail clearfix">
+				<div class="number cart-number">已选择<span>0</span></div>
+				<div class="total-price cart-price">￥<span>0.00</span></div>
+			</div>
+			<div class="grid-cart-btn">
+				<button class="disable" disabled="disabled">结算</button>
+			</div>
+		</div>
+	</div>
+	<!--  购物车 end  -->
+</div>
+
+<script> 
+	var window_h = $(window).height();
+	$(".fixed-bar").height(window_h);
+	$(".mui-bar").height(window_h);
+	$(".bar-grid-cart").height(window_h);
+
+	
+
+	
+	
+// /验证是否登录的 flag是布尔值
+window.isLogin = function(){
+	var flag = "";
+	//是否登录的布尔值
+	return flag;
+}
+
+function goLogin(){
+	//去登录界面
+}
+
+//购物车操作
+var shopCar = {
+	//表示是否选中商品 默认是没选中的
+	_chooseStatus : function(obj) {
+		return $(obj).closest(".goods-list").data("checked");
+	}, 
+	//返回总共多少店铺
+	_shopLength : function(obj){
+		return $(obj).closest(".grid-cart").find(".cart-item").length;
+	},
+	//返回当前商铺总共多少商品
+	_shopGoodsLength : function(obj){
+		return $(obj).closest(".cart-item").find(".goods-list").length;
+	},
+	//当前店铺选中商品
+	_shopSelectedGoodsNum : function(obj){
+		return $(obj).closest(".cart-item").find(".goods-list[data-checked=true]").length;
+	},
+	_selectedShopNum : function(obj){
+		return $(obj).closest(".grid-cart").find(".cart-item[data-checked=true]").length;
+	},
+	//所有被选中商品
+	_globalSelectedGoodsNum : function(){
+		return $(".goods-list[data-checked=true]").length;
+	},
+	//返回总共多少商品
+	_globalGoodsLength : function(){
+		return $(".goods-list").length;
+	},
+	_getNum : function(str){
+		return parseInt(str, 10);
+	},
+	_getFloatNum : function(str){
+		return parseFloat(str).toFixed(2);
+	},
+	init : function(){
+		this.bind();
+	},
+	nowNum : function(obj){
+		var str = $(obj).siblings(".num").text();
+		return shopCar._getNum(str);
+	},
+	bind : function(){
+		$(".goods-num .add").click(this.clickPlus);
+		$(".goods-num .min").click(this.clickMin);
+		$(".goods-list .js-remove").click(this.clickRemove);
+		$(".cart-item .radio-shop").click(this.chooseShop);
+		$(".cart-item .radio-goods").click(this.chooseGoods);
+		$(".grid-cart .radio-all").click(this.chooseAll);
+		$(".goods-desc").hover(this.showBar, this.hideBar);
+	},
+	showBar  : function(e){
+		$(this).find(".mui-btn").css("display", "inline-block");
+	},
+	hideBar : function(e){
+		$(this).find(".mui-btn").css("display", "none");
+	},
+	// 更新总数
+	updataTotalNum : function(){
+
+	},
+	//更新数据
+	updataData : function(){
+		console.log("updataData");
+		var num 	= [],
+			price 	= [],
+			totalNum= 0,
+			totalP	= 0;
+
+		var tmp, tmpNum, tmpPrice;
+		$(".goods-list[data-checked=true]").each(function(i){
+			tmpPrice = $(this).find(".goods-price p").text();
+			tmpPrice = shopCar._getFloatNum(tmpPrice);
+			price.push(tmpPrice);
+
+			tmpNum = $(this).find(".num").text();
+			tmpNum = shopCar._getNum(tmpNum);
+			num.push(tmpNum);
+		})
+		
+		for(var i = 0; i < num.length && i < price.length; i++){
+			
+			totalP 	 += num[i]*price[i];
+			totalNum += num[i];
+
+			console.log(totalP)
+			console.log(totalNum)
+		};
+		totalP = shopCar._getFloatNum(totalP)
+		$(".cart-number span").text(totalNum);
+		$(".cart-price span").text(totalP);
+
+
+	},
+	//更新结算按钮状态
+	updataBtnStatus : function(){
+		var flag;
+		var length = this._globalSelectedGoodsNum();
+		length > 0 ? flag = true : flag = false;
+		if(flag){
+			$(".grid-cart-btn button").removeClass("disable").removeAttr("disabled");
+		} else {
+			$(".grid-cart-btn button").addClass("disable").attr("disabled","disabled");
+		}
+	},
+	//更新标签 删除或者添加触发
+	updataBadge : function(obj){
+		var str = $(".grid-cart .goods-list").length;
+		$(".mui-cart-num").text(str);
+	},
+	//更新当前商品数字
+	updataNowNumber : function(obj, str){
+		$(obj).siblings(".num").text(str);
+	},
+	//删除商品
+	delGoods : function(obj){
+		var flag = confirm("确定要删除");
+		if (flag) {
+			shopCar.serverDelGoods(obj);
+		}
+	},
+
+	clickPlus : function(e){
+		var that 	 = this;
+		var newValue = shopCar.nowNum(that) + 1;
+		shopCar.addNum(that, newValue);
+		
+	},
+	clickMin : function(e){
+		var that 	 = this;
+		var nowValue = shopCar.nowNum(that);
+		//如果为一 删除商品
+		if (nowValue == 1){
+			shopCar.delGoods(that);
+		} else {
+			var newValue = nowValue - 1;
+			shopCar.minNum(that, newValue);
+		}
+	},
+	clickRemove : function(e){
+		var that = this;
+		shopCar.delGoods(that);
+	},
+	chooseShop : function(e){
+		var that 	 = this;
+		var shopLen  = shopCar._shopLength(that);  //获取一共有几个店铺
+		//如果选中 
+		//console.log("shop checked : " , this.checked);
+		if (this.checked) {
+			$(this).closest(".cart-item").attr("data-checked", true);
+			//所有商品选中
+			$(this).closest(".cart-item").find(".radio-goods").each(function(){
+				this.checked = true;
+				$(this).closest(".goods-list").attr("data-checked", true);
+			})
+
+			var shopSel = shopCar._selectedShopNum(that);
+			shopCar.judgeShop(shopLen, shopSel);
+		} else {
+			$(this).closest(".cart-item").attr("data-checked", false);
+			//取消所有商品选中 
+			$(this).closest(".cart-item").find(".radio-goods").each(function(){
+				this.checked = false;
+				$(this).closest(".goods-list").attr("data-checked", false);
+			});
+
+			var shopSel = shopCar._selectedShopNum(that);
+			shopCar.judgeShop(shopLen, shopSel);
+		}
+		shopCar.updataData();
+		shopCar.updataBtnStatus();
+	},
+	chooseGoods : function(e){
+		var that 	 = this;
+		var	totalLen = shopCar._shopGoodsLength(that); //获取这个店铺有几个商品
+		
+		//如果选中
+		if(this.checked){
+			$(this).closest(".goods-list").attr("data-checked", true);
+			//var	len = $(this).closest(".goods-list[data-checked=true]").length;
+			var len = shopCar._shopSelectedGoodsNum(that);
+		} else {
+			$(this).closest(".goods-list").attr("data-checked", false);
+			var len = shopCar._shopSelectedGoodsNum(that);
+		}
+		//是否店铺的所有input都被选中 or 没选中
+		shopCar.judgeGoods(totalLen, len, that);
+		shopCar.updataData(); //更新数据
+		shopCar.updataBtnStatus();
+	},
+	chooseAll : function(e){
+		//当前选中状态 
+		// 如果选中
+		if (this.checked){
+			$(".radio-goods").each(function(i){
+				this.checked = true;
+				$(this).closest(".goods-list").attr("data-checked", true);
+				$(this).closest(".cart-item").attr("data-checked", true);
+				$(this).closest(".cart-item").find(".radio-shop")[0].checked = true;
+			})
+		}  else {
+			$(".radio-goods").each(function(i){
+				this.checked = false;
+				$(this).closest(".goods-list").attr("data-checked", false);
+				$(this).closest(".cart-item").attr("data-checked", false);
+				$(this).closest(".cart-item").find(".radio-shop")[0].checked = false;
+			})
+		}
+		shopCar.updataData();
+	},
+	//判断商品是不是都被选中
+	judgeGoods : function(str1, str2, obj){
+		var shopLen  = shopCar._shopLength(obj);  //获取一共有几个店铺
+		console.log("str1:", str1);
+		console.log("str2:", str2);
+		//str1 为一共几个商品 str2 为选中了几个商品
+		if(str2){
+			//商品被选中 选中店铺，
+			$(obj).closest(".cart-item").find(".radio-shop")[0].checked = true;
+			$(obj).closest(".cart-item").attr("data-checked", true);
+
+			var shopSel = shopCar._selectedShopNum(obj);
+			//判断店铺是否全选
+			shopCar.judgeShop(shopLen, shopSel);
+		} else if(str2 == 0){
+			$(obj).closest(".cart-item").find(".radio-shop")[0].checked = false;
+			$(obj).closest(".cart-item").attr("data-checked", false);
+
+			var shopSel = shopCar._selectedShopNum(obj);
+			//判断店铺是否全没被选中
+			shopCar.judgeShop(shopLen, shopSel);
+		}
+	},
+	//判断店铺是不是都被选中
+	judgeShop  : function(str1, str2){
+		//console.log("一共:" ,str1,"个店铺")
+		//console.log("一共选择了:" ,str2,"个店铺")
+		//str1 为一共几个店铺 str2 为选中了几个店铺
+		if(str1 == str2){
+			$(".radio-all")[0].checked = true;
+			var goodsLen = shopCar._globalGoodsLength(),
+				selLen	 = shopCar._globalSelectedGoodsNum();
+				//console.log("goodsLen:",goodsLen);
+				//console.log("selLen:",selLen);
+			if(goodsLen == selLen){
+				$(".radio-all")[0].checked = true;
+			} else {
+				$(".radio-all")[0].checked = false;
+			}
+		} else {
+			$(".radio-all")[0].checked = false;
+		}
+	},
+	allInputCheck : function(){
+
+	},
+	checkedShop : function(obj){
+
+	}
+}
+
+
+shopCar.init();
+//下面是购物车代码， 操纵购物车增删改查的操作，右边工具条和购物车通用
+
+//obj是当前点击的加号 str是加了之后的值  如果原来为1 这里的str为2
+shopCar.addNum = function(obj, str){
+	//做完存储过程  执行更新数据 
+	shopCar.updataNowNumber(obj, str);
+
+	//如果有商品被选中 那么更新总价格和数量
+	shopCar._chooseStatus(obj) && shopCar.updataData();
+};
+//obj是当前点击的减号 str是加了之后的值  如果原来为2 这里的str为1
+shopCar.minNum = function(obj, str){
+	//做完存储过程  执行更新数据 
+	shopCar.updataNowNumber(obj, str);
+
+	//如果该商品被选中 那么更新总价格和数量
+	shopCar._chooseStatus(obj) && shopCar.updataData();
+};
+//obj是点击的减号或者是关闭的按钮  获取最外层皆可使用$(obj).closest(".goods-list")
+shopCar.serverDelGoods = function(obj){
+	// 删除商品的操作  先做PHP的处理， 在执行下面的代码 
+
+	//  没有实现了两边购物车都一起删除的效果，你看你怎么交互数据。到时候再改现在我不好处理
+	var tag	   		 = $(obj).closest(".goods-list");
+	var cart   		 = $(obj).closest(".cart-item");
+	var goods_length = $(obj).closest(".cart-item").find(".goods-desc").length;		//总共有多少个商品
+	var cart_length	 = shopCar._shopLength(obj);		//总共有多少个店铺
+	//判断当前店铺有几个商品
+	if(goods_length == 1){
+		if( cart_length == 1){
+			//只有一个店铺 清空购物车 显示提示消息
+			$(cart).remove();
+			$(".null-tip").show();
+		} else {
+			$(cart).remove();
+		}
+	} else {
+		$(tag).remove();
+	}
+	//更新购物车badge。
+	shopCar.updataBadge(obj);
+
+	//更新总价格和数量
+	shopCar.updataData();
+};
+//工具条操作
+var muiBar = {
+	tag : null,
+	init : function(){
+		this.bind();
+		this.flag = this.tag[1].hasClass("mui-open");
+		$(document).mouseup(function(e){
+		  	var _con = $('.fixed-bar');   // 设置目标区域
+		  	if(!_con.is(e.target) && _con.has(e.target).length === 0){ 
+		    	muiBar.closeBar();
+		  	}
+		});
+		var win_height = $(window).height();
+		$(window).scroll(function(){
+			var height = $(this).scrollTop();
+			if(height > win_height){
+				$(".mui-top").fadeIn();
+			} else {
+				$(".mui-top").fadeOut();
+			}
+		})
+	},
+	bind : function(){
+		//绑定事件
+		this.tag[1].click(this.eventClick);
+		this.tag[0].hover(this.mouseOn, this.mouseOut);
+	},
+	mouseOn : function(e){
+		var flag = $(this).hasClass("mui-open");
+		flag ? e.preventDefault() : $(this).addClass("hover");
+		
+	},
+	mouseOut : function(e){
+		var flag = $(this).hasClass("mui-open");
+		flag ? e.preventDefault() : $(this).removeClass("hover");
+	},
+	// 点击按钮 
+	eventClick : function(e){
+		//如果为假，去登录界面
+		window.isLogin || goLogin(); 
+		var flag = $(this).hasClass("mui-open");
+		flag ? muiBar.closeBar() : muiBar.openBar();
+	},
+	openBar : function(){
+		$(".fixed-bar").animate({
+			right : 0
+		});
+		muiBar.tag[1].removeClass("mui-cart-hover").addClass("mui-open hover");
+	},
+	closeBar : function(){
+		
+		$(".fixed-bar").animate({
+			right : "-280px"
+		});
+		muiBar.tag[1].addClass("mui-cart-hover").removeClass("mui-open hover");
+	}
+
+}
+
+
+//初始化事件
+muiBar.tag = [$(".mui-cart-hover"), $(".mui-cart-btn")];
+muiBar.init();
+
+</script>
+
+</body>
+</html>

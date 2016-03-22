@@ -1,0 +1,76 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors csy (you@example.org)
+ * @date    2015-11-30 17:37:50
+ * @version $Id$
+ */
+ body{
+ 	background-color: #F5F5F5;
+ }
+.search-box{
+	margin-top:20px;
+}
+.swiper-slide img{
+	width:100%;
+	border:0 none;
+	display: block;
+	font-size:0;
+}
+.goto{
+	display: block;
+}
+.goto img{
+	width:100%;
+	display: block;
+}
+.brand{
+
+}
+.brand div{
+	background-color: #FFF;
+}
+.brand a{
+	display: block;
+	background-color: #FFF;
+	width:100%;
+}
+.brand a img{
+	display: block;
+	width:100%;
+	border:0;
+	margin:0 auto;
+}
+.brand-title{
+	float: left;
+	width: 290px;
+}
+.brand-title a{
+	display: block;
+
+}
+.brand-title a img{
+	margin:0 auto;
+	display: block;
+	border:0;
+	width: 100%;
+	height:232px;
+}
+.notic{
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+.title-like{
+	text-align: center;
+}
+.like p{
+	font-size:14px;
+	line-height: 20px;
+	color:#666;
+	height:40px;
+	overflow: hidden;
+}
+.like span {
+	font-size: 14px;
+	color:#FF0000;
+}

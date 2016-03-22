@@ -116,6 +116,10 @@ select { display: block; width: 100%; }
 
 .swiper-container img { display: block; width: 100%; }
 
+.btn-red { color: #FFF; background-color: #EC3351; }
+
+.btn-u { line-height: 0.3rem; }
+
 .footer { background-color: #FFF; border-top: 1px solid #DDD; padding: 0.05rem; width: 100%; left: 0; bottom: 0; }
 
 .footer a { display: block; color: #333; font-size: 0.12rem; }
@@ -265,25 +269,68 @@ select { display: block; width: 100%; }
 
 .shop .show-all .shadow { border-bottom: 1px solid #DDD; box-shadow: 0px 2px 3px 0px #ddd; }
 
-.shop .grid-list { margin-top: 0.1rem; padding: 0 0.05rem; }
+/* diy配件 */
+.diy-list { padding-bottom: 0.4rem; }
 
-.shop .grid-list .item { padding: 0 0.05rem; margin-bottom: 0.1rem; }
+.diy-list .nav { position: relative; border-bottom: 1px solid #DDD; border-top: 1px solid #DDD; height: 0.34rem; }
 
-.shop .grid-list .ctx { border: 1px solid #DDDDDD; padding-bottom: 0.08rem; }
+.diy-list .nav-ctx { overflow: hidden; padding: 0 0.1rem; }
 
-.shop .grid-list .ctx img { border-bottom: 1px solid #DDD; }
+.diy-list .nav-ctx .left-nav { float: left; }
 
-.shop .grid-list .ctx .price { color: #EC3351; font-size: 0.14rem; font-weight: 800; }
+.diy-list .nav-ctx .left-nav h3 { font-size: 0.14rem; font-weight: 800; line-height: 0.34rem; }
 
-.shop .grid-list .ctx .price span { font-size: 0.12rem; }
+.diy-list .nav-ctx .left-nav span { display: inline-block; width: 0.175rem; height: 0.175rem; background-image: url(../images/icon-down.png); background-size: 100% 100%; vertical-align: middle; margin-left: 12px; transition: transform .6s linear; -webkit-transition: transform .6s linear; }
 
-.shop .grid-list .ctx .num { font-size: 0.12rem; color: #999999; }
+.diy-list .nav-ctx .left-nav .icon-up { transform: rotate(180deg); -webkit-transform: rotate(180deg); }
 
-.shop .grid-list .ctx p { margin-top: 0.08rem; padding: 0 0.075rem; line-height: 0.2rem; height: 0.4rem; overflow: hidden; }
+.diy-list .nav-ctx .right-nav { float: right; color: #FFF; background-color: #EC3351; line-height: 0.2rem; height: 0.2rem; padding: 0 0.05rem; border-radius: 0.05rem; margin-top: 0.07rem; }
 
-.shop .grid-list .ctx .desc { padding: 0 0.075rem; }
+.diy-list .diy-peijian { z-index: 99; display: none; position: absolute; background-color: #fff; left: 0; width: 100%; top: 0.32rem; padding: 0 0.1rem; border-bottom: 1px solid #DDD; box-shadow: 0 2px 2px 0 #DDD; padding-bottom: 0.1rem; }
 
-/* 更多经销商 */
+.diy-list .diy-peijian .col-12 span { color: #EC3351; }
+
+.diy-list .diy-peijian .col-12 span i { font-size: 12px; font-style: normal; }
+
+.diy-list .diy-peijian .ctx { padding: 0 0.05rem; }
+
+.diy-list .diy-peijian .ctx .item { color: #666; line-height: 0.23rem; height: 0.24rem; border: 1px solid #DDD; font-size: 0.12rem; text-align: center; }
+
+.diy-list .diy-peijian .ctx .ut-s { margin-top: 0.1rem; }
+
+.diy-list .diy-peijian .ctx .col-6:nth-child(even) { padding-left: 0.025rem; }
+
+.diy-list .diy-peijian .ctx .col-6:nth-child(odd) { padding-right: 0.025rem; }
+
+.diy-list .diy-peijian .btn-red { border-radius: 0.05rem; }
+
+.diy-list .diy-peijian .total { line-height: 0.4rem; color: #EC3351; }
+
+.diy-list .diy-peijian .total span { font-size: 0.16rem; }
+
+.diy-list .diy-peijian .tip { font-size: 12px; position: relative; padding-left: 65px; margin-top: 0.05rem; }
+
+.diy-list .diy-peijian .tip span { position: absolute; top: 2px; left: 0; color: #EC3351; }
+
+.diy-list .diy-peijian .tip p { color: #999999; line-height: 20px; }
+
+.diy-list .fenlei { padding: 0 0.1rem; }
+
+.diy-list .fenlei .all span { line-height: 0.21rem; border-radius: 0.105rem; background-color: #DDDDDD; padding: 0 0.175rem; display: inline-block; margin-top: 0.1rem; }
+
+.diy-list .fenlei .all { padding-bottom: 0.1rem; }
+
+.diy-list .fenlei .fenlei-title { display: none; }
+
+.diy-list .fenlei .fenlei-title p { color: #999; line-height: 0.3rem; height: 0.3rem; }
+
+.diy-list .fenlei .fenlei-title p span { color: #EC3351; }
+
+.diy-list .fenlei .fenlei-title a { position: absolute; top: 0; right: 0; color: #333; height: 0.3rem; line-height: 0.3rem; }
+
+.diy-list .fenlei .fenlei-title a:actived, .diy-list .fenlei .fenlei-title a:visted { color: #333; }
+
+/* 下拉列表 */
 .more-list { display: none; padding: 0.1rem; padding-top: 0.2rem; z-index: 100; position: absolute; border-radius: 0.08rem; left: 5%; width: 90%; top: 0.45rem; background-color: #373737; }
 
 .more-list a { color: #FFF; display: inline-block; margin-bottom: 0.1rem; line-height: 0.2rem; }
@@ -291,3 +338,22 @@ select { display: block; width: 100%; }
 .more-list a:visted, .more-list a:actived { color: #FFF; }
 
 .more-list .triangle { display: inline-block; width: 0; height: 0; overflow: hidden; line-height: 0; font-size: 0; vertical-align: middle; border-bottom: 7px solid #373737; border-top: 0 none; border-left: 7px solid transparent; border-right: 7px solid transparent; position: absolute; top: -7px; left: 85%; }
+
+/* 商品列表 */
+.grid-list { margin-top: 0.1rem; padding: 0 0.05rem; }
+
+.grid-list .item { padding: 0 0.05rem; margin-bottom: 0.1rem; }
+
+.grid-list .ctx { border: 1px solid #DDDDDD; padding-bottom: 0.08rem; }
+
+.grid-list .ctx img { border-bottom: 1px solid #DDD; }
+
+.grid-list .ctx .price { color: #EC3351; font-size: 0.14rem; font-weight: 800; }
+
+.grid-list .ctx .price span { font-size: 0.12rem; }
+
+.grid-list .ctx .num { font-size: 0.12rem; color: #999999; }
+
+.grid-list .ctx p { margin-top: 0.08rem; padding: 0 0.075rem; line-height: 0.2rem; height: 0.4rem; overflow: hidden; }
+
+.grid-list .ctx .desc { padding: 0 0.075rem; }
