@@ -337,6 +337,8 @@ select { display: block; width: 100%; }
 
 .goods .goods-name { margin-top: 0.1rem; padding: 0 0.2rem; line-height: 0.2rem; margin-bottom: 0.1rem; }
 
+.goods .price { margin-bottom: 0.1rem; }
+
 .goods .price div { display: inline-block; }
 
 .goods .price div:first-child { color: #EC3351; font-size: 0.18rem; }
@@ -477,3 +479,8 @@ select { display: block; width: 100%; }
 .mask .mask-color .go-pay { color: #FFF; background-color: #EC3351; }
 
 .mask .mask-color .go-pay:actived, .mask .mask-color .go-pay:visted { color: #FFF; }
+
+/* 购物车图标 */
+.shop-cart { position: fixed; width: 0.33rem; height: 0.33rem; background-image: url(../images/shop-cart.png); background-size: 100% 100%; z-index: 999; right: 0.15rem; bottom: 0.55rem; }
+
+.shop-cart span { position: absolute; color: #FFF; background-color: #EC3351; display: block; border-radius: 50%; padding: 0.01rem 0.04rem; top: -0.02rem; right: -0.005rem; font-size: 0.12rem; }

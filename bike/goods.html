@@ -84,7 +84,11 @@
 		<div class="col-6"><a href="javascript:;" class="bk go-cart tx-c js-shop">加入购物车</a></div>
 		<div class="col-6"><a href="javascript:;" class="bk go-pay tx-c js-shop">立即购买</a></div>
 	</div>
-	<!-- 加入购物车弹出 -->
+	<!-- 购物车icon -->
+	<a href="javascript:;" class="shop-cart">
+		<span>9</span>
+	</a>
+	<!-- 加入购物车弹出 选择颜色和购物车是一个弹出框 -->
 	<div class="mask-bg"></div>
 	<div class="mask hidden">
 		<div class="mask-cont">
@@ -182,6 +186,7 @@
 		$(".mask-bg").click(function(){
 			$(".mask-bg").hide();
 			$(".mask").addClass("hidden");
+			$(".sel-btn").hide();
 		});
 
 		$(".item-sel").click(function(){
