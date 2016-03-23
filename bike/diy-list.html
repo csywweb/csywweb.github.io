@@ -115,10 +115,10 @@
 						<span>电动车防盗锁</span>
 						<span>电动充电延长线</span>
 					</div>
-					<div class="fenlei-title relative">
+					<!-- 这里后来又不要了<div class="fenlei-title relative">
 						<p class="fenlei-desc">尾灯共<span>38</span>个宝贝</p>
 						<a href="javascript:;" class="cancle">取消</a>
-					</div>
+					</div> -->
 				</div>
 				<!-- 分类 end -->
 				<!-- 商品图片后台上传大小比例一致 这里才可以显示正常，这里图片宽度百分之百高度自己撑开的-->
@@ -227,12 +227,14 @@
 
 		//分类
 		$(".all span").click(function(){
-			var str = $(this).text();
+			/*var str = $(this).text();
 			var num = 38;   //总数
 			$(".fenlei-desc").html(str + "共<span>"+ num +"</span>个宝贝")
 
 			$(".all").hide();
-			$(".fenlei-title").show();
+			$(".fenlei-title").show();*/
+			$(this).siblings().removeClass("checked");
+			$(this).addClass("checked");
 		})
 
 		$(".cancle").click(function(){
