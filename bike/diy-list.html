@@ -67,28 +67,28 @@
 					<!--  diy 配件 -->
 					<div class="diy-peijian">
 						<div class="col-12 ctx">
-							<div class="col-6 ut-s">
-								<div class="item">
+							<div class="col-6 grid">
+								<div class="item js-item ut-s">
 									小乌龟前叉<span>1000<i>元</i></span>(高配)
 								</div>
 							</div>
-							<div class="col-6 ut-s">
-								<div class="item">
+							<div class="col-6 grid">
+								<div class="item js-item ut-s">
 									小乌龟前叉<span>1000<i>元</i></span>(高配)
 								</div>
 							</div>
-							<div class="col-6 ut-s">
-								<div class="item">
+							<div class="col-6 grid">
+								<div class="item js-item ut-s">
+									小乌龟前叉阿萨德<span>1000<i>元</i></span>(高配)
+								</div>
+							</div>
+							<div class="col-6 grid">
+								<div class="item js-item ut-s">
 									小乌龟前叉<span>1000<i>元</i></span>(高配)
 								</div>
 							</div>
-							<div class="col-6 ut-s">
-								<div class="item">
-									小乌龟前叉<span>1000<i>元</i></span>(高配)
-								</div>
-							</div>
-							<div class="col-6 ut-s">
-								<div class="item">
+							<div class="col-6 grid">
+								<div class="item js-item ut-s">
 									小乌龟前叉<span>1000<i>元</i></span>(高配)
 								</div>
 							</div>
@@ -225,8 +225,8 @@
 			$(".more-list").toggle();
 		})		
 
+		//分类
 		$(".all span").click(function(){
-			
 			var str = $(this).text();
 			var num = 38;   //总数
 			$(".fenlei-desc").html(str + "共<span>"+ num +"</span>个宝贝")
@@ -238,6 +238,24 @@
 		$(".cancle").click(function(){
 			$(".fenlei-title").hide();
 			$(".all").show();
+		})
+
+		/* 字数限定 */
+		var maxlength = 33;
+		$(".js-item").each(function(){
+			if($(this).text().length > maxlength ){
+				$(this).closest(".col-6").removeClass("col-6").addClass("long");
+			}
+		})
+		console.log(maxlength)
+
+		$(".diy-peijian .col-6").each(function(v, i){
+			console.log(v);
+			if(v % 2 == 0){
+				$(this).css("paddingRight","0.025rem");
+			} else {
+				$(this).css("paddingLeft", "0.025rem");
+			}
 		})
 	})
 </script>

@@ -114,6 +114,8 @@ select { display: block; width: 100%; }
 
 .clearfix, .container:after, .col-1::after, .col-2::after, .col-2-4::after, .col-3::after, .col-4::after, .col-5::after, .col-6::after, .col-7::after, .col-8::after, .col-9::after, .col-12::after { content: ""; display: table; clear: both; }
 
+.hidden { visibility: hidden; }
+
 .swiper-container img { display: block; width: 100%; }
 
 .btn-red { color: #FFF; background-color: #EC3351; }
@@ -272,6 +274,8 @@ select { display: block; width: 100%; }
 /* diy配件 */
 .diy-list { padding-bottom: 0.4rem; }
 
+.diy-list .grid-list { margin-top: 0 !important; }
+
 .diy-list .nav { position: relative; border-bottom: 1px solid #DDD; border-top: 1px solid #DDD; height: 0.34rem; }
 
 .diy-list .nav-ctx { overflow: hidden; padding: 0 0.1rem; }
@@ -292,15 +296,13 @@ select { display: block; width: 100%; }
 
 .diy-list .diy-peijian .col-12 span i { font-size: 12px; font-style: normal; }
 
-.diy-list .diy-peijian .ctx { padding: 0 0.05rem; }
+.diy-list .diy-peijian .ctx { padding: 0 0.05rem; /* .col-6:nth-child(even){ padding-left:0.025rem; } .col-6:nth-child(odd){ padding-right: 0.025rem; } */ }
 
 .diy-list .diy-peijian .ctx .item { color: #666; line-height: 0.23rem; height: 0.24rem; border: 1px solid #DDD; font-size: 0.12rem; text-align: center; }
 
-.diy-list .diy-peijian .ctx .ut-s { margin-top: 0.1rem; }
+.diy-list .diy-peijian .ctx .grid { margin-top: 0.1rem; }
 
-.diy-list .diy-peijian .ctx .col-6:nth-child(even) { padding-left: 0.025rem; }
-
-.diy-list .diy-peijian .ctx .col-6:nth-child(odd) { padding-right: 0.025rem; }
+.diy-list .diy-peijian .ctx .long { width: 100%; float: left; }
 
 .diy-list .diy-peijian .btn-red { border-radius: 0.05rem; }
 
@@ -314,7 +316,7 @@ select { display: block; width: 100%; }
 
 .diy-list .diy-peijian .tip p { color: #999999; line-height: 20px; }
 
-.diy-list .fenlei { padding: 0 0.1rem; }
+.diy-list .fenlei { padding: 0 0.1rem 0; }
 
 .diy-list .fenlei .all span { line-height: 0.21rem; border-radius: 0.105rem; background-color: #DDDDDD; padding: 0 0.175rem; display: inline-block; margin-top: 0.1rem; }
 
@@ -329,6 +331,71 @@ select { display: block; width: 100%; }
 .diy-list .fenlei .fenlei-title a { position: absolute; top: 0; right: 0; color: #333; height: 0.3rem; line-height: 0.3rem; }
 
 .diy-list .fenlei .fenlei-title a:actived, .diy-list .fenlei .fenlei-title a:visted { color: #333; }
+
+/* 商品详情 */
+.goods main { padding-bottom: 0.4rem; }
+
+.goods .goods-name { margin-top: 0.1rem; padding: 0 0.2rem; line-height: 0.2rem; margin-bottom: 0.1rem; }
+
+.goods .price div { display: inline-block; }
+
+.goods .price div:first-child { color: #EC3351; font-size: 0.18rem; }
+
+.goods .price div:nth-child(2) { font-size: 0.12rem; color: #999999; }
+
+.goods .price div:nth-child(3) { color: #FFF; font-size: 0.12rem; background-color: #EC3351; border-radius: 0.05rem; padding: 0 0.05rem; }
+
+.goods .goods-desc { padding: 0 0.1rem; font-size: 0.12rem; color: #999; }
+
+.goods .goods-info { background-color: #FFF; border-bottom: 1px solid #DDD; padding-bottom: 0.15rem; }
+
+.goods .choose-color { padding: 0 0.1rem; line-height: 0.4rem; position: relative; height: 0.4rem; border-top: 1px solid #DDD; border-bottom: 1px solid #DDD; }
+
+.goods .choose-color span { position: absolute; line-height: 0.4rem; top: 0; right: 0.1rem; height: 0.38rem; background-image: url(../images/icon-right.jpg); width: 0.07rem; background-size: 100% 100%; }
+
+.goods .bg { background-color: #EEE; height: 0.05rem; }
+
+.goods .goods-detail { padding: 0 0.1rem; }
+
+.goods .goods-detail img { width: 100%; display: block; }
+
+.goods .goods-detail p { line-height: 0.2rem; }
+
+.goods .repeat { display: none; padding: 0 0.2rem; }
+
+.goods .repeat .repeat-item { border-bottom: 1px solid #DDD; overflow: hidden; font-size: 0.12rem; }
+
+.goods .repeat .repeat-item .repeat-title { padding: 0.05rem 0; overflow: hidden; }
+
+.goods .repeat .repeat-item .user { color: #666; float: left; }
+
+.goods .repeat .repeat-item .date { color: #999; float: right; }
+
+.goods .repeat .repeat-item p { font-size: 0.12rem; line-height: 0.2rem; }
+
+.goods .tab { padding: 0 0.1rem; }
+
+.goods .tab a { color: #333; line-height: 0.36rem; height: 0.36rem; border-bottom: 1px solid #DDD; }
+
+.goods .tab a:actived, .goods .tab a:visted { color: #333; }
+
+.goods .tab a.now { color: #EC3351; }
+
+.goods .bottom-button { position: fixed; z-index: 20; width: 100%; left: 0; bottom: 0; background-color: #FFF; border-top: 1px solid #DDD; padding: 0.05rem 0.1rem; }
+
+.goods .bottom-button .col-6:first-child { padding-right: 0.05rem; }
+
+.goods .bottom-button .col-6:last-child { padding-left: 0.05rem; }
+
+.goods .bottom-button a { font-size: 0.12rem; height: 0.3rem; line-height: 0.3rem; border-radius: 0.05rem; }
+
+.goods .bottom-button .go-cart { color: #AA1931; background-color: #FFD40E; }
+
+.goods .bottom-button .go-cart:actived, .goods .bottom-button .go-cart:visted { color: #AA1931; }
+
+.goods .bottom-button .go-pay { color: #FFF; background-color: #EC3351; }
+
+.goods .bottom-button .go-pay:actived, .goods .bottom-button .go-pay:visted { color: #FFF; }
 
 /* 下拉列表 */
 .more-list { display: none; padding: 0.1rem; padding-top: 0.2rem; z-index: 100; position: absolute; border-radius: 0.08rem; left: 5%; width: 90%; top: 0.45rem; background-color: #373737; }
@@ -357,3 +424,56 @@ select { display: block; width: 100%; }
 .grid-list .ctx p { margin-top: 0.08rem; padding: 0 0.075rem; line-height: 0.2rem; height: 0.4rem; overflow: hidden; }
 
 .grid-list .ctx .desc { padding: 0 0.075rem; }
+
+/* 商品详情 弹出层 */
+.mask-bg { display: none; position: fixed; left: 0; bottom: 0; z-index: 98; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); }
+
+.mask .mask-cont { position: fixed; z-index: 101; background-color: #FFF; width: 100%; bottom: 0; left: 0; }
+
+.mask .mask-cont .icon-close { position: absolute; width: 0.3rem; height: 0.3rem; background-image: url(../images/icon-close.png); right: 0.1rem; top: -0.15rem; }
+
+.mask .mask-cont .choice { padding: 0 0.1rem; }
+
+.mask .mask-cont .choice .choice-title { color: #999; font-size: 0.12rem; margin-top: 0.15rem; margin-bottom: 0.1rem; }
+
+.mask .mask-cont .choice .choice-title a { color: #EC3351; position: absolute; top: 0; right: 0; text-decoration: underline; }
+
+.mask .mask-cont .choice .choice-title a:actived, .mask .mask-cont .choice .choice-title a:visted { color: #EC3351; }
+
+.mask .mask-cont .choice .item-sel { display: inline-block; border: 1px solid #DDD; color: #999; /* padding:0.02rem 0.1rem; */ width: 0.5rem; text-align: center; line-height: 0.2rem; border-radius: 0.06rem; }
+
+.mask .mask-cont .choice .checked { border: 1px solid #EC3351; color: #EC3351; }
+
+.mask .mask-cont .number { width: 45%; overflow: hidden; }
+
+.mask .mask-cont .number .min { border: 1px solid #DDD; border-top-left-radius: 0.06rem; border-bottom-left-radius: 0.06rem; }
+
+.mask .mask-cont .number .add { border: 1px solid #DDD; border-top-right-radius: 0.06rem; border-bottom-right-radius: 0.06rem; }
+
+.mask .mask-cont .number .num { border-top: 1px solid #DDD; border-bottom: 1px solid #DDD; }
+
+.mask .mask-title { position: relative; padding: 0 0.1rem; padding-left: 0.9rem; }
+
+.mask .mask-title img { display: block; position: absolute; width: 0.75rem; height: 0.75rem; left: 0.1rem; top: -0.1rem; border: 2px solid #DDD; }
+
+.mask .mask-title p { line-height: 0.25rem; color: #333; font-size: 0.14rem; }
+
+.mask .mask-title h2 { color: #EC3351; font-size: 0.14rem; line-height: 0.25rem; }
+
+.mask .mask-title div { font-size: 0.12rem; color: #999; line-height: 0.2rem; }
+
+.mask .mask-title div span { margin-right: 0.08rem; }
+
+.mask .mask-btn { display: none; margin-top: 0.2rem; }
+
+.mask .mask-btn a { height: 0.4rem; line-height: 0.4rem; }
+
+.mask .mask-color a { font-size: 0.12rem; }
+
+.mask .mask-color .go-cart { color: #AA1931; background-color: #FFD40E; }
+
+.mask .mask-color .go-cart:actived, .mask .mask-color .go-cart:visted { color: #AA1931; }
+
+.mask .mask-color .go-pay { color: #FFF; background-color: #EC3351; }
+
+.mask .mask-color .go-pay:actived, .mask .mask-color .go-pay:visted { color: #FFF; }
