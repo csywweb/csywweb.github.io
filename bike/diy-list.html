@@ -233,8 +233,13 @@
 
 			$(".all").hide();
 			$(".fenlei-title").show();*/
-			$(this).siblings().removeClass("checked");
-			$(this).addClass("checked");
+			if($(this).hasClass("checked")){
+				$(this).removeClass("checked");
+			} else {
+				$(this).siblings().removeClass("checked");
+				$(this).addClass("checked");
+			}
+			
 		})
 
 		$(".cancle").click(function(){
