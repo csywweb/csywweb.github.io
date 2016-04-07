@@ -1031,6 +1031,8 @@ select {
   .grid-brand .top {
     padding: 0.05rem 0;
     border-bottom: 1px solid #DDD; }
+  .grid-brand .search-warp {
+    padding-bottom: 0; }
   .grid-brand .menu {
     width: 0.9rem;
     border-right: 1px solid #DDD;
@@ -1038,15 +1040,25 @@ select {
     .grid-brand .menu img {
       display: block;
       width: 100%; }
-    .grid-brand .menu div.current {
-      background-color: #F8F8F8;
-      border-right: 1px solid #f8f8f8; }
     .grid-brand .menu div {
       height: 0.34rem;
       width: 100%;
       position: relative;
       border-bottom: 1px solid #DDD; }
       .grid-brand .menu div a {
+        display: block; }
+    .grid-brand .menu .line {
+      width: 1px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: -2px;
+      background-color: #F8F8F8;
+      display: none; }
+    .grid-brand .menu div.current {
+      background-color: #F8F8F8;
+      border-right: 1px solid #f8f8f8; }
+      .grid-brand .menu div.current .line {
         display: block; }
   .grid-brand .brand-desc {
     padding-left: 0.05rem; }
@@ -1067,6 +1079,6 @@ select {
   .grid-brand section h3 {
     padding-left: 0.1rem;
     line-height: 0.34rem;
-    font-size: 0.16rem; }
+    font-size: 0.14rem; }
 
 /*# sourceMappingURL=main.css.map */
