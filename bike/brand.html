@@ -190,4 +190,12 @@
 	</div>   
 	<!-- 底部 end-->
 </body>
+<script>
+	$(function(){
+		$(".menu div").click(function(){
+			$(this).siblings().removeClass("current");
+			$(this).addClass("current");
+		})
+	})
+</script>
 </html>
