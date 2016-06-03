@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport"/>
+<meta name="format-detection" content="telephone=no" />
+<title>个人中心</title>
+<link rel="stylesheet" type="text/css" href="styles/main.css">
+<link rel="stylesheet" type="text/css" href="styles/swiper.min.css">
+<link rel="stylesheet" type="text/css" href="styles/dropload.css">
+<script type="text/javascript" src="scripts/zepto.min.js"></script>
+<script type="text/javascript">
+	var rem = window.innerWidth/3.2;
+	function init(){
+		document.documentElement.style.fontSize = window.innerWidth/3.2 + 'px';
+		//console.log($(".grid-menu").height() )
+		var height1 = -($(".grid-menu").height() +  0.3*rem + 10);
+		$(".grid-list").css("bottom", height1);
+	}
+</script>
+</head>
+<body onload="init()" >
+    <main class="usercenter">
+    	<!-- 用户信息 -->
+    	<div class="user-info p10 ub">
+    		<img src="images/user-img.png">
+    		<div class="ub-f1 grid-info">
+    			<p class="username">中华小当家</p>
+    			<div class="ub info">
+    				<div class="ub-f1">ID：101102</div>
+    				<div class="ub-f1">积分：8596</div>
+    			</div>
+    			<div class="time">关注时间：2016-05-04</div>
+    		</div>
+    	</div>
+    	<div class="grid-money ub">
+    		<div class="ub-f1 pl-30">营业额：￥2486.00</div>
+    		<div class="ub-f1 pr-50 tx-r">佣<span style="color:#FFF">佣</span>金：￥58.20</div>
+    	</div>
+    	<p class="tx-c tuijian">你是由<span>官网</span>推荐</p>
+    	<!-- 功能按钮 -->
+    	<div class="col-12 grid-item border-t border-b">
+    		<a href="javascript:;" class="col-6 item">
+    			<img src="images/icon-drawing.png" alt="">
+    			<div class="">
+    				<p class="title">申请提款</p>
+    				<p class="small">申请账户金额提现</p>
+    			</div>
+    		</a>
+    		<a href="javascript:;" class="col-6 item">
+    			<img src="images/icon-record.png" alt="">
+    			<div class="">
+    				<p class="title">提款记录</p>
+    				<p class="small"><span>0</span>笔</p>
+    			</div>
+    		</a>
+    	</div>
+    	<!-- 分割线 ————————————————————————————————-->
+		<div class="col-12 grid-item border-t mt15 relative">
+    		<a href="javascript:;" class="col-6 item js-myuser">
+    			<img src="images/icon-member.png" alt="">
+    			<div class="">
+    				<p class="title">我的会员</p>
+    				<p class="small"><span>0</span>人</p>
+    			</div>
+    		</a>
+    		<a href="javascript:;" class="col-6 item js-myinfo">
+    			<img src="images/icon-help.png" alt="">
+    			<div class="">
+    				<p class="title">救援信息</p>
+    				<p class="small"><span>1</span>条</p>
+    			</div>
+    		</a>
+            <div class="clear"></div>
+            <div class="tip tip1">
+                <span class="angle"></span>
+                <a class="ub ub-ac" href="javascript:;">
+                    <p class="ub-f1">合伙人（1人）</p>
+                    <span class="bk"></span>            
+                </a>
+                <a class="ub ub-ac" href="javascript:;">
+                    <p class="ub-f1">小伙伴（1人）</p>
+                    <span class="bk"></span>            
+                </a>
+                <a class="ub ub-ac" href="javascript:;">
+                    <p class="ub-f1">店友（1人）</p>
+                    <span class="bk"></span>            
+                </a>
+            </div>
+            <div class="tip tip2">
+                <span class="angle"></span>
+                <a class="ub ub-ac" href="javascript:;">
+                    <p class="ub-f1">合伙人（1人）</p>
+                    <span class="bk"></span>            
+                </a>
+                <a class="ub ub-ac" href="javascript:;">
+                    <p class="ub-f1">小伙伴（1人）</p>
+                    <span class="bk"></span>            
+                </a>
+                <a class="ub ub-ac" href="javascript:;">
+                    <p class="ub-f1">店友（1人）</p>
+                    <span class="bk"></span>            
+                </a>
+            </div>
+    	</div>
+    	<div class="col-12 grid-item border-t border-b ">
+    		<a href="javascript:;" class="col-6 item">
+    			<img src="images/icon-extend.png" alt="">
+    			<div class="">
+    				<p class="title">我的推广</p>
+    				<p class="small"><span>0</span>人</p>
+    			</div>
+    		</a>
+    		<a href="javascript:;" class="col-6 item">
+    			<img src="images/icon-money.png" alt="">
+    			<div class="">
+    				<p class="title">我的红米</p>
+    				<p class="small"><span>￥0.00</span></p>
+    			</div>
+    		</a>
+    	</div>
+    	<!-- 分割线 ————————————————————————————————-->
+    	<div class="col-12 grid-item border-t mt15">
+    		<a href="javascript:;" class="col-6 item">
+    			<img src="images/icon-ziliao.png" alt="">
+    			<div class="">
+    				<p class="title">我的资料</p>
+    				<p class="small">我的个人信息</p>
+    			</div>
+    		</a>
+    		<a href="javascript:;" class="col-6 item">
+    			<img src="images/icon-myorder.png" alt="">
+    			<div class="">
+    				<p class="title">我的订单</p>
+    				<p class="small"><span>1</span>单</p>
+    			</div>
+    		</a>
+    	</div>
+    	<div class="col-12 grid-item border-t border-b">
+    		<a href="javascript:;" class="col-6 item">
+    			<img src="images/icon-coupon.png" alt="">
+    			<div class="">
+    				<p class="title">我的优惠券</p>
+    				<p class="small"><span>0</span>张</p>
+    			</div>
+    		</a>
+    		<a href="javascript:;" class="col-6 item">
+    			<img src="images/icon-myfix.png" alt="">
+    			<div class="">
+    				<p class="title">我的维修单</p>
+    				<p class="small"><span>0</span>单</p>
+    			</div>
+    		</a>
+    	</div>
+    	<div class="col-12 grid-item border-b">
+    		<a href="javascript:;" class="col-6 item">
+    			<img src="images/icon-car.png" alt="">
+    			<div class="">
+    				<p class="title">拖车救援</p>
+    				<p class="small"><span>0</span>条</p>
+    			</div>
+    		</a>
+    		<a href="javascript:;" class="col-6 item">
+    			<img src="images/icon-myfix.png" alt="">
+    			<div class="">
+    				<p class="title">我的维修金</p>
+    				<p class="small"><span>￥2.22</span>修车佣金</p>
+    			</div>
+    		</a>
+    	</div>
+    	<!-- 分割线 ————————————————————————————————-->
+    </main>
+<script>
+    $(function(){
+        /*$(document).bind("click",function(e){ 
+            var target  = $(e.target); 
+            if(target.closest(".tip").length == 0){ 
+                $(".tip").hide(); 
+            } 
+            else 
+            { 
+                $(".tip").show(); 
+            } 
+        });*/ 
+        $(".js-myuser").click(function(){
+            $(".tip1").toggle();
+        })
+        $(".js-myinfo").click(function(){
+            $(".tip2").toggle();
+        })
+    })
+</script>
+</body>
+</html>

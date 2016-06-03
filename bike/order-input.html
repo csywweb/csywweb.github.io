@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport"/>
+	<meta name="format-detection" content="telephone=no" />
+	<title>湖南路翔电动车电子商务平台</title>
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+	<link rel="stylesheet" type="text/css" href="styles/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="styles/dropload.css">
+	<script type="text/javascript" src="scripts/zepto.min.js"></script>
+	<script src="scripts/dropload.min.js"></script>
+	<script src="scripts/swiper.min.js"></script>
+	<script type="text/javascript">
+	var rem = window.innerWidth/3.2;
+		function init(){
+			document.documentElement.style.fontSize = window.innerWidth/3.2 + 'px';
+			//console.log($(".grid-menu").height() )
+			var height1 = -($(".grid-menu").height() +  0.3*rem + 10);
+			$(".grid-list").css("bottom", height1);
+		}
+	</script>
+</head>
+<body onload="init()">
+    <main class="order-input">
+    	<a href="javascript:;" class="header relative">
+    		<p>收货人：刘翔宇&nbsp;&nbsp;12341233321</p>
+    		<p class="add ut-s">长沙市雨花区XXXXXXXX</p>
+    		<span></span>
+    	</a>
+    	<div class="p-10 pingtai mt10">路翔电商平台</div>
+    	<div class="grid-goods-info p10 ub">
+    		<img src="images/goods-1.png" >
+			<div class="ub-f1">
+				<div class="ub">
+					<div class="ub-f1">爱玛电动自行车MINI家族系列 Kiddy</div>
+					<p class="price">￥2288</p>
+				</div>
+				<div class="ub c999">
+					<div class="ub-f1 small">规格：消光橄榄绿/哑黑</div>
+					<div>x1</div>
+				</div>
+			</div>
+    	</div>
+    	<div class="fff p-10 pay-way">
+    		<div class="border-b ub ">
+	    		<div class="ub-f1">配送方式</div>
+	    		<div class="btn-way none check"><span></span>同城快递</div>
+	    		<div class="btn-way none"><span></span>店铺自提</div>
+    		</div>
+    	</div>
+    	<div class="ub fff p-10 pay-way">
+    		<div class="ub-f1">支付方式</div>
+    		<div class="btn-way none check"><span></span>微信支付</div>
+    		<div class="btn-way none "><span></span>佣金支付</div>
+    	</div>
+    	<div class="mt10 p-10 fff ub ticket">
+    		<span></span>
+    		<div class="ub-f1">使用优惠券</div>
+    		<div>-100</div>
+    	</div>
+    	<div class="bottom-bk ub ub-ac border-t p-10">
+    		<div class="ub-f1 red ut-s">共计：<span>￥2338</span><i>（含运费100）</i></div>
+    		<button class="btn btn-red">提交订单</button>
+    	</div>
+    </main>
+    <!-- 优惠券 -->
+    <div class="value">
+    	<div class="mask"></div>
+    	<div class="value-list p10">
+    		<h3 class="tx-c">使用优惠券</h3>
+    		<!-- one -->
+    		<div class="item border-b js-choose">
+    			<div>
+    				<span class="title btn-red">购物优惠券</span>
+    				<span class="ml10">100减50元</span>
+    			</div>
+    			<p class="c999">适用范围：仅可在购买商品时使用该 优惠券(可叠加)</p>
+    			<p class="c999">有效期至：2016.02.05--2016.06.06</p>
+    			<span class="radio cur"></span>
+    		</div>
+    		<!-- one end -->
+    		<!-- one -->
+    		<div class="item border-b js-choose">
+    			<div>
+    				<span class="title btn-red">购物优惠券</span>
+    				<span class="ml10">100减50元</span>
+    			</div>
+    			<p class="c999">适用范围：仅可在购买商品时使用该 优惠券(可叠加)</p>
+    			<p class="c999">有效期至：2016.02.05--2016.06.06</p>
+    			<span class="radio"></span>
+    		</div>
+    		<!-- one end -->
+    		<!-- one -->
+    		<div class="item border-b js-choose">
+    			<div>
+    				<span class="title btn-red">购物优惠券</span>
+    				<span class="ml10">100减50元</span>
+    			</div>
+    			<p class="c999">适用范围：仅可在购买商品时使用该 优惠券(可叠加)</p>
+    			<p class="c999">有效期至：2016.02.05--2016.06.06</p>
+    			<span class="radio"></span>
+    		</div>
+    		<!-- one end -->
+    		<div class="btn btn-red full js-close">关闭</div>
+    	</div>
+    </div>
+    
+    <!-- 优惠券 end -->
+<script>
+	$(function(){
+		$(".btn-way").click(function(){
+			$(this).siblings().removeClass("check");
+			$(this).addClass("check");
+		})
+
+		$(".ticket").click(function(){
+			$(".value").show();
+		})
+
+		$(".js-close").click(function(){
+			$(".value").hide();
+		})
+		$(".js-choose").click(function(){
+			$(this).find(".radio").toggleClass("cur");
+		})
+
+	})
+</script>
+</body>
+</html>

@@ -8,15 +8,13 @@
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
 	<link rel="stylesheet" type="text/css" href="styles/swiper.min.css">
 	<link rel="stylesheet" type="text/css" href="styles/dropload.css">
-	<script type="text/javascript" src="scripts/jquery.js"></script>
+	<script type="text/javascript" src="scripts/zepto.min.js"></script>
 	<script src="scripts/dropload.min.js"></script>
 	<script src="scripts/swiper.min.js"></script>
 	<script type="text/javascript">
 	var rem = window.innerWidth/3.2;
 		function init(){
 			document.documentElement.style.fontSize = window.innerWidth/3.2 + 'px';
-			
-
 			//console.log($(".grid-menu").height() )
 			var height1 = -($(".grid-menu").height() +  0.3*rem + 10);
 			$(".grid-list").css("bottom", height1);
@@ -322,8 +320,44 @@
 			</a>
 		</div>
 	</div>
+	<!-- 浮动窗口 -->
+	<div class="index-tip p10">
+		<div class="ub mb10">
+			<div class="title">温馨提示：</div>
+			<div class="ub-f1">为了更好的为您提供服务，请输入您的联系电话和归属地</div>
+		</div>
+		<div class="ub mb10">
+			<div class="title">联系电话：</div>
+			<input class="ub-f1" type="text">
+		</div>
+		<div class="ub mb10">
+			<div class="title">归属地：</div>
+			<div class="ub-f1 ub">
+				<div class="ub-f1 ub ub-ac">
+					<input type="text" class="ub-f1">
+					<p>省</p>
+				</div>
+				<div class="ub-f1 ub ub-ac">
+					<input type="text" class="ub-f1">
+					<p>市</p>
+				</div>
+			</div>
+		</div>
+		<div class="ub">
+			<div class="title"></div>
+			<div class="ub-f1 ub">
+				<a href="javascript:;" class="btn btn-red ub-f1 mr5">确认</a>
+				<a href="javascript:;" class="btn btn-black ub-f1 ml5 js-closetip">关闭</a>
+			</div>
+		</div>
+	</div>
 <script>
 	$(function(){
+		$(".js-closetip").click(function(){
+			$(".index-tip").hide();
+		})
+
+		//关闭
 		var swiper = new Swiper('.swiper-container', {
                         pagination: '.swiper-pagination',
                         paginationClickable: true

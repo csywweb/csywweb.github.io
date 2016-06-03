@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport"/>
+<meta name="format-detection" content="telephone=no" />
+<title>支付成功</title>
+<link rel="stylesheet" type="text/css" href="styles/main.css">
+<link rel="stylesheet" type="text/css" href="styles/swiper.min.css">
+<link rel="stylesheet" type="text/css" href="styles/dropload.css">
+<script type="text/javascript" src="scripts/zepto.min.js"></script>
+<script type="text/javascript">
+	var rem = window.innerWidth/3.2;
+	function init(){
+		document.documentElement.style.fontSize = window.innerWidth/3.2 + 'px';
+		//console.log($(".grid-menu").height() )
+		var height1 = -($(".grid-menu").height() +  0.3*rem + 10);
+		$(".grid-list").css("bottom", height1);
+	}
+</script>
+</head>
+<body onload="init()" style="background: #F8F8F8;">
+    <main class="paysucc">
+    	<div class="pay-title">
+    		<p>支付成功,商家即刻发货</p>
+    		<p>及时在会员中心留意订单状态</p>
+    	</div>
+		<div class="pay-info ">
+			<div class="add">
+				<p>收货人：刘翔宇</p>
+				<p>收货地址：长沙市雨花区得杏源E区8栋</p>
+			</div>
+			<p class="price">总价：￥<span>2888</span></p>
+			<div class="col-12">
+				<div class="col-6"><a href="javascript:;" class="btn btn-blank">查看订单</a></div>
+				<div class="col-6"><a href="javascript:;" class="btn btn-blank">返回首页</a></div>
+			</div>
+		</div>
+		<div class="pay-tip mt10">
+			<h2>安全提醒</h2>
+			<p>付款成功后，平台不会以付款异常、卡单、升级为由联系您。</p>
+			<p class="red">请勿泄露银行卡号、手机验证码，否则会造成钱款损失。谨防带电话诈骗</p>
+		</div>
+    </main>
+</body>
+</html>

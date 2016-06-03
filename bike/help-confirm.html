@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport"/>
+	<meta name="format-detection" content="telephone=no" />
+	<title>湖南路翔电动车电子商务平台</title>
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+	
+	<script type="text/javascript" src="scripts/zepto.min.js"></script>
+	<script type="text/javascript" src="scripts/sm.min.js"></script>
+	<script type="text/javascript" src="scripts/sm-city-picker.min.js"></script>
+	<script type="text/javascript">
+	var rem = window.innerWidth/3.2;
+		function init(){
+			document.documentElement.style.fontSize = window.innerWidth/3.2 + 'px';
+			//console.log($(".grid-menu").height() )
+			var height1 = -($(".grid-menu").height() +  0.3*rem + 10);
+			$(".grid-list").css("bottom", height1);
+		}
+	</script>
+</head>
+<body onload="init()">
+	<main class="help-req pb-50">
+		<img class="center-logo" src="images/center-bg.jpg">
+		<div class="form">
+			<div class="ub p-10 border-b">
+				<div class="head">姓名</div>
+				<input type="text" class="bk ub-f1" value="刘翔宇" readonly>
+			</div>
+			<div class="ub p-10 border-b">
+				<div class="head">联系电话</div>
+				<input type="text" class="bk ub-f1" value="13912344123" readonly>
+			</div>
+			<div class="ub p-10 border-b">
+				<div class="head">所在地区</div>
+				<input type="text" class="bk ub-f1" value="长沙市雨花区" readonly>
+			</div>
+			<div class="ub p-10 border-b">
+				<div class="head">详细地址</div>
+				<input type="text" class="bk ub-f1" value="XXXXXXXXXX" readonly>
+			</div>
+			<div class="ub p-10 border-b">
+				<div class="head">电动车品牌</div>
+				<input type="text" class="bk ub-f1" value="立马电动车" readonly>
+			</div>
+			<div class="ub p-10 border-b">
+				<div class="head">电动车型号</div>
+				<input type="text" class="bk ub-f1" value="coco" readonly>
+			</div>
+			<div class="ub p-10 border-b">
+				<div class="head">电池电压</div>
+				<input type="text" class="bk ub-f1" value="48V" readonly>
+			</div>
+			<div class="ub p-10 border-b">
+				<div class="head">车架号/电池号</div>
+				<input type="text" class="bk ub-f1" value="1234531534" readonly>
+			</div>
+			<img src="images/line.png" alt="" class="bk">
+			<div class="ub p-10 border-b">
+				<div class="head">救援时间</div>
+				<input type="text" class="bk ub-f1" value="2016.05.05 16:31">
+			</div>
+			<div class="ub p-10 border-b">
+				<div class="head">救援地区</div>
+				<input type="text" class="bk ub-f1" value="" id="city-picker">
+			</div>
+			<div class="ub p-10 border-b">
+				<div class="head">救援地点</div>
+				<input type="text" class="bk ub-f1" placeholder="">
+			</div>
+		</div>
+	</main>
+    <a href="javascript:;" class="btn btn-red fixed full">确认</a>
+ <script>
+ //地区插件
+ //http://m.sui.taobao.org/extends/#city-picker
+ 	$(function(){
+ 		$("#city-picker").cityPicker({
+		    toolbarTemplate: '<header class="bar bar-nav">\
+		    <button class="button button-link pull-right close-picker">确定</button>\
+		    <h1 class="title">选择收货地址</h1>\
+		    </header>'
+		  });
+ 	})
+ </script>
+</body>
+</html>
