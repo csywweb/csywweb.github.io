@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>KJUI</title>
+	<meta name="viewport" content="initial-scale=1, user-scalable=0" charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<script type="text/javascript" src="scripts/fix.js"></script>
+</head>
+<body>
+	<div id="container" class="container">
+		
+	</div>
+	<script type="text/html" id="tpl_home">
+		<div class="home">
+			<h2 class="page-title ptb20">KJUI</h2>
+			<p class="page-desc">跨境集市移动端组件</p>
+			<div class="kjui-grids">
+				<div class="kjui-grid">
+					<a href="#/button" class="kjui-grid ui-button">button</a>
+				</div>
+				<div class="kjui-grid">
+					<a href="#/actionsheet" class="kjui-grid ui-actionSheet">actionSheet</a>
+				</div>
+				<div class="kjui-grid">
+					<a href="#/dialog" class="kjui-grid ui-dialog">dialog</a>
+				</div>
+				<div class="kjui-grid">
+					<a href="#/toast" class="kjui-grid ui-toast">toast</a>
+				</div>
+			</div>
+		</div>
+	</script>
+	<script type="text/html" id="tpl_button">
+		<div class="button">
+			<h2 class="page-title ptb20">Button</h2>
+			<div class="p20 btn-group">
+				<a href="javascript:;" class="btn btn-default">button</a>
+				<a href="javascript:;" class="btn btn-gray">button</a>
+				<a href="javascript:;" class="btn btn-cancle">button</a>
+
+				<p>block btn</p>
+				<a href="javascript:;" class="btn btn-default bk">button</a>
+				<a href="javascript:;" class="btn btn-gray bk">button</a>
+				<a href="javascript:;" class="btn btn-cancle bk">button</a>
+			</div>
+		</div>
+	</script>
+	<script type="text/html" id="tpl_actionsheet">
+		<div class="actionSheet">
+			<h2 class="page-title ptb20">actionSheet</h2>
+			<div class="p20 tx-c">
+				<a href="javascript:;" class="btn btn-default" id="tel">打开上拉电话菜单</a>
+			</div>
+		</div>
+	</script>
+	<script type="text/html" id="tpl_dialog">
+		<div class="actionSheet">
+			<h2 class="page-title ptb20">dialog</h2>
+			<div class="p20">
+				<a href="javascript:;" class="btn btn-cancle" id="alert">模拟alert</a>
+				<a href="javascript:;" class="btn btn-cancle" id="confirm">模拟confirm</a>
+			</div>
+		</div>
+	</script>
+	<script type="text/html" id="tpl_toast">
+		<div class="actionSheet">
+			<h2 class="page-title ptb20">Toast</h2>
+			<div class="p20">
+				<a href="javascript:;" class="btn btn-cancle" id="tip">纯文字</a>
+				<a href="javascript:;" class="btn btn-cancle" id="loading">loading</a>
+			</div>
+		</div>
+	</script>
+    <script src="scripts/zepto.min.js"></script>
+    <script src="scripts/router.min.js"></script>
+    <script src="scripts/kjui.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+*{padding:0;margin:0;font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;box-sizing:border-box;}
+body{
+	font-size:1.4rem;
+	color:#333;
+}
+a{
+	text-decoration: none;
+}
+.tx-c{
+	text-align: center;
+}
+.ptb20{
+	padding-top:2rem;
+	padding-bottom: 2rem;
+}
+.p20{
+	padding:2rem;
+}
+.ub{
+	display: flex;
+}
+.ub-f1{
+	flex:1;
+}
+.page-title{
+	font-size:3.4rem;
+	color:#0099E6;
+	font-weight: 600;
+	text-align: center;
+}
+.page-desc{
+	color:#666;
+	text-align: center;
+}
+.kjui-grids{
+	max-width: 640px;
+	margin:0 auto;
+	margin-top:3rem;
+}
+.kjui-grid{
+	height:3rem;
+	line-height: 3rem;
+	a{
+		border-bottom: 1px solid #E6E6E6;
+		display: block;
+		background-size: 2.4rem 2.4rem;
+		background-repeat: no-repeat;
+		background-position: 0.6rem center;
+		padding-left:3.5rem;
+		color:#666;
+		&:hover{
+			background-color: #FFF;
+		}
+		&:active,&:visited{
+			color:#666;
+		}
+
+	}
+}
+.ui-button{
+	background-image:url(../images/icon_nav_button.png);
+}
+.ui-actionSheet{
+	background-image:url(../images/icon_nav_actionSheet.png);
+}
+.ui-dialog{
+	background-image:url(../images/icon_nav_dialog.png);
+}
+.ui-toast{
+	background-image:url(../images/icon_nav_toast.png);
+}
+.btn-group .btn{
+	margin-bottom: 1.5rem;
+}
+.highlight{
+	margin-bottom: 14px;
+    background-color: #f7f7f9;
+    border: 1px solid #e1e1e8;
+    border-radius: 4px;
+    pre{
+    	display: block;
+    	overflow: auto;
+    }
+}
+@import "kjui"
