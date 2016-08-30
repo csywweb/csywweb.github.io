@@ -1,0 +1,102 @@
+.mask-citysel {
+  display: none;
+}
+
+.mask-citysel dd, .mask-citysel dt {
+  margin: 0;
+  padding: 0;
+}
+
+.mask-citysel * {
+  box-sizing: border-box;
+}
+
+.mask-citysel a {
+  text-decoration: none;
+}
+
+.mask-citysel .mask-shade {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.mask-citysel .main-citysel {
+  position: fixed;
+  bottom: 0;
+  top: 100px;
+  z-index: 100;
+  width: 100%;
+  max-width: 640px;
+  background-color: #FFF;
+}
+
+.mask-citysel .main-citysel .head-citysel {
+  border-bottom: 1px solid #CCC;
+  height: 5rem;
+  line-height: 5rem;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 1rem;
+}
+
+.mask-citysel .main-citysel .head-citysel div {
+  -ms-flex: 1;
+      flex: 1;
+  width: 0;
+}
+
+.mask-citysel .main-citysel .head-citysel a {
+  color: #0099e6;
+}
+
+.mask-citysel .main-citysel .head-citysel a:visited {
+  color: #0099e6;
+}
+
+.mask-citysel .main-citysel dl {
+  height: 100%;
+  overflow: hidden;
+}
+
+.mask-citysel .main-citysel dl dt, .mask-citysel .main-citysel dl dd {
+  overflow-y: auto;
+  height: 100%;
+  float: left;
+}
+
+.mask-citysel .main-citysel dl dt a, .mask-citysel .main-citysel dl dd a {
+  color: #666;
+  line-height: 5rem;
+  height: 5rem;
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
+.mask-citysel .main-citysel dl dt a:visited, .mask-citysel .main-citysel dl dd a:visited {
+  color: #666;
+}
+
+.mask-citysel .main-citysel dl .current {
+  background-color: #FFF;
+  border-left: 4px solid orange;
+}
+
+.mask-citysel .main-citysel dl dt {
+  width: 37.5%;
+  background-color: #F2F2F2;
+}
+
+.mask-citysel .main-citysel dl dd {
+  width: 62.5%;
+  padding-left: 1rem;
+}
+
+.mask-citysel .main-citysel dl dd a {
+  border-bottom: 1px solid #DCDCDC;
+}

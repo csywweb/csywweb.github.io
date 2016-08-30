@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>citySel</title>
+	<meta content="width=device-width initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport"/>
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+	<link rel="stylesheet" type="text/css" href="styles/need.css">
+
+</head>
+<body>
+	
+	<p>省市区选择移动端组件：</p>
+	<div>
+		<input type="text" class="citySel js-citysel" readonly>
+	</div>
+	<div class="mask-citysel">
+	    <div class="mask-shade"></div>
+	    <div class="main-citysel">
+	        <div class="head-citysel">
+	            <div class="">
+	                <a href="javascript:;" class="normal parent-text">xxxx</a>
+	                <a href="javascript:;" class="normal">></a>
+	                <a href="javascript:;" class="normal child-text">xxxxx</a>
+	            </div>
+	            <span class="close-citysel">x</span>
+	        </div>
+	        <dl class="ui-box child-citysel">
+	            <dt class="first-citysel">
+	            	<a href="javascript:;" class="cur">12312</a>
+	            </dt>
+	            <dd class="second-citysel">
+	            	<a href="javascript:;">asadasda</a>
+	            </dd>
+	        </dl>
+	    </div>
+	</div>
+	<script src="scripts/zepto.min.js"></script>
+	<script src="scripts/citySel.js"></script>
+	<script>
+		$(".js-citysel").click(function(){
+			$(".mask-citysel").show();
+		})
+	</script>
+</body>
+</html>

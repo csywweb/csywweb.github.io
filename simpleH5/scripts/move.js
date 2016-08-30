@@ -35,8 +35,8 @@ var touch = {
 	//禁止滚动条
 	_scrollStop		: function(){
 						//禁止滚动
-						$(window).on('touchmove.scroll',this._scrollControl);
-						$(window).on('scroll.scroll',this._scrollControl);
+						$(window).on('touchmove.scroll',function(e){e.preventDefault();});
+						$(window).on('scroll.scroll',function(e){e.preventDefault();});
 	},
 
 	//滚动条控制事件
@@ -44,7 +44,7 @@ var touch = {
 
 
     //初始化事件
-	initSwipe : function(){
+	initSwipe : function(){		
 		touch._view.swipeUp(touch.page_swipeUp);
 		touch._view.swipeDown(touch.page_swipeDown);
 	},
