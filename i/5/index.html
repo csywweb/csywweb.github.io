@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>hover边框效果</title>
+<style type="text/css">
+	*{margin:0;padding:0;}
+	a{text-decoration: none;}
+	.content{width:200px;padding:10px;border:1px solid #DDD;margin-left:100px;margin-top:100px;cursor: pointer;position: relative;}
+	.content .hover{display: block;position: absolute;background-color: #42C0FF;transition: all .3s linear;-webkit-transition:all .3s linear;}
+	.content .hover-2,.hover-4{height:1px;width:0;}
+	.content .hover-1, .hover-3{width:1px;height:0;}
+	.content .hover-1{top:0;left:0;}
+	.content .hover-2{top:0;right:0;}
+	.content .hover-3{bottom:0;right:0;}
+	.content .hover-4{bottom:0;left:0;}
+	.content:hover .hover-1{height:100%;}
+	.content:hover .hover-2{width:100%;}
+	.content:hover .hover-3{height:100%;}
+	.content:hover .hover-4{width:100%;}
+	.content img{width:200px;display: block;margin:0 auto;}
+	.content div{text-align: right;margin-top:10px;}
+	.content a{color:#FFF;background-color: #42C0FF;padding:5px 10px;border-radius: 4px;}
+</style>
+</head>
+<body>
+    <div class="content">
+    	<span class="hover hover-1"></span>
+    	<span class="hover hover-2"></span>
+    	<span class="hover hover-3"></span>
+    	<span class="hover hover-4"></span>
+    	<img src="images/1.jpg" alt="">
+    	<p>英雄介绍：复仇之魂</p>
+    	<p>属性：敏捷英雄</p>
+    	<div>
+    		<a href="href:javascript:;">查看详情</a>
+    	</div>
+    </div>
+</body>
+</html>
