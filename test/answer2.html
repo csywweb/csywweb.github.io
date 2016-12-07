@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Answer 2</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="robots" content="INDEX,FOLLOW">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="stylesheet" type="text/css" href="assets/stylesheets/base.css">
+<link rel="stylesheet" type="text/css" href="assets/stylesheets/main.css">
+</head>
+<body class='layout-box'>
+	<div class="container">
+		<h3>问题描述：</h3>
+		<p>请按下列要求写出相应的 Html 和 CSS现有并列的三列布局结构，从左至右依次为 A, B, C, 宽度分别为180px, 600px, 180px。要求在不改变 Html 结构的情况下用CSS实现：ABC，CBA，BAC 三种布局及在CBA排列下使B宽度自适应（三列总宽度100%），不能使用针对浏览器的CSS Hack.</p>
+		<h3>ABC，全部左浮动</h3>
+		<div class="wrap abc-layout layout">
+			<div class="A text-center">block A</div>
+			<div class="B text-center">block B</div>
+			<div class="C text-center">block C</div>
+		</div>
+		<h3>CBA，全部右浮动</h3>
+		<div class="wrap cba-layout layout">
+			<div class="A text-center">block A</div>
+			<div class="B text-center">block B</div>
+			<div class="C text-center">block C</div>
+		</div>
+		<h3>BAC，使用定位</h3>
+		<div class="wrap bac-layout layout">
+			<div class="A text-center">block A</div>
+			<div class="B text-center">block B</div>
+			<div class="C text-center">block C</div>
+		</div>
+		<h3>CBA,B自适应，使用浮动</h3>
+		<div class="cba-box">
+			<div class="A text-center">block A</div>
+			<div class="B text-center">block B</div>
+			<div class="C text-center">block C</div>
+		</div>
+		<h3>CBA,B自适应，使用定位</h3>
+		<div class="cba-box">
+			<div class="A text-center">block A</div>
+			<div class="B text-center">block B</div>
+			<div class="C text-center">block C</div>
+		</div>
+	</div>
+</body>
+</html>
