@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>便民服务桥</title>
+<link rel="stylesheet" href="styles/jquery-weui.min.css">
+<link rel="stylesheet" href="styles/main.css">
+<link rel="stylesheet" href="styles/center.css">
+<script src="scripts/jquery.min.js"></script>
+<script src="scripts/jquery-weui.min.js"></script>
+<script src="scripts/city-picker.min.js"></script>
+<script src="scripts/global.js"></script>
+<script>
+	$(function(){
+
+	    $("#city-picker").cityPicker({
+	        title: "选择省市区/县",
+	        onChange: function (picker, values, displayValues) {
+	            // console.log(values, displayValues);
+	        }
+	    });
+
+	})
+</script>
+</head>
+<body class="bg-gray">
+    <div class="direction-column page-idService">
+    	<header>
+    		<div class="service-tab col-12">
+		    	<div class="tab-btn col-6">
+		    		<a href="javascript:;" class="tc active">身份证寄递</a>
+		    	</div>
+		    	<div class="tab-btn col-6">
+		    		<a href="javascript:;" class="tc">其他业务寄递</a>
+		    	</div>
+		    </div>
+    	</header>
+    	<div class="wrap p-10">
+    		<div class="service-title">公安受理信息</div>
+	    	<div class="input-box bigtitle">
+	    		<div class="input-grid center">
+	    			<div class="title">公安受理号：</div>
+	    			<input type="text" placeholder="请输入公安受理号">
+	    			<img src="images/code.png" alt="">
+	    		</div>
+	    		<div class="input-grid">
+	    			<div class="title">申请人：</div>
+	    			<input type="text" placeholder="请输入申请人姓名">
+	    		</div>
+	    		<div class="input-grid center">
+	    			<div class="title">身份证：</div>
+	    			<input type="text" placeholder="请输入身份证号码">
+	    			<img src="images/code.png" alt="">
+	    		</div>
+	    	</div>
+	    	<div class="service-title">邮递信息</div>
+	    	<div class="input-box">
+	    		<div class="input-grid address">
+	    			<div class="title ">收件人：</div>
+	    			<input type="text" placeholder="请输入姓名">
+	    		</div>
+	    		<div class="input-grid address">
+	    			<div class="title ">手机号码：</div>
+	    			<input type="text" placeholder="请输入手机号码">
+	    		</div>
+	    		<div class="input-grid address">
+	    			<div class="title">固定电话：</div>
+	    			<input type="text" placeholder="请输入固定电话">
+	    		</div>
+	    		<div class="input-grid">
+	    			<div class="title">选择地区：</div>
+	    			<input type="text" placeholder="请选择省市区" id="city-picker">
+	    		</div>
+	    		<div class="input-grid">
+	    			<div class="title">详细地址：</div>
+	    			<textarea placeholder="请输入详细地址"></textarea>
+	    		</div>
+	    	</div>
+    	</div>
+    	<footer class="money-footer">
+    		<div>支付金额：￥<span>10.00</span></div>
+    		<a href="javascript:;" class="btn">下一步</a>
+    	</footer>
+    </div>
+</body>
+</html>
