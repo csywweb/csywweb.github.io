@@ -1,0 +1,137 @@
+.page-index{
+	.swiper-slide{
+		height:200px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 100%;
+		background-image: url(../images/banner.png);
+	}
+	.tel{
+		width:100%;
+		display: block;
+		margin-top:15px;
+		margin-bottom:15px;
+	}
+	.bg-line{
+		height:8px;
+		background-color: #efeef4;
+	}
+	.grid-service{
+		padding:20px 10px 0;
+		.title{
+			color:#000;
+			font-size:14px;
+			font-weight: 800;
+			padding-left:5px;
+			border-left:2px solid #4f77fe;
+			margin-bottom: 15px;
+		}
+	}
+	.flex-grid{
+		display: flex;
+		.flex-item{
+			width:33.33333333%;
+			margin-bottom:20px;
+			a{
+				display: block;
+				width:px2rem(55px);
+				margin:0 auto;
+				.bg-box{
+					width:px2rem(55px);
+					height:px2rem(55px);
+					background-repeat: no-repeat;
+					background-position: center;
+				}
+				p{
+					font-size:13px;
+					text-align: center;
+					margin-top:10px;
+				}
+				.zaixianzixun{
+					background-image: url(../images/zaixianzixun.png);
+					background-size: px2rem(49px) px2rem(49px);
+				}
+				.wangshangyuyue{
+					background-image: url(../images/wangshangyuyue.png);
+					background-size: px2rem(51px) px2rem(45px);
+				}
+				.wangshangbanshi{
+					background-image: url(../images/wangshangbanshi.png);
+					background-size: px2rem(51px) px2rem(45px);
+				}
+				.shequminjing{
+					background-image: url(../images/shequminjing.png);
+					background-size: px2rem(36px) px2rem(47px);
+				}
+				.xiansuojubao{
+					background-image: url(../images/xiansuojubao.png);
+					background-size: px2rem(45px) px2rem(45px);
+				}
+				.weizhangchaxun{
+					background-image: url(../images/weizhangchaxun.png);
+					background-size: px2rem(45px) px2rem(45px);
+				}
+				.gerenjidi{
+					background-image: url(../images/gerenjidi.png);
+					background-size: px2rem(56px) px2rem(36px);
+				}
+				.jiazhengfuwu{
+					background-image: url(../images/jiazhengfuwu.png);
+					background-size: px2rem(51px) px2rem(48px);
+				}
+				.daolujiuyuan{
+					background-image: url(../images/daolujiuyuan.png);
+					background-size: px2rem(47px) px2rem(47px);
+				}
+				.jikaisuo{
+					background-image: url(../images/jikaisuo.png);
+					background-size: px2rem(41px) px2rem(50px);
+				}
+				.diannaoweixiu{
+					background-image: url(../images/diannaoweixiu.png);
+					background-size: px2rem(55px) px2rem(45px);
+				}
+				.jiadianweixiu{
+					background-image: url(../images/jiadianweixiu.png);
+					background-size: px2rem(47px) px2rem(45px);
+				}
+				.gengduo{
+					background-image: url(../images/gengduo.png);
+					background-size: px2rem(50px) px2rem(50px);
+				}
+			}
+		}
+	}
+	.footer-nav{
+		height:46px;
+		display: flex;
+		box-shadow: 0px -4px 10px 0px 
+		rgba(0, 0, 0, 0.06);
+		justify-content:space-around;
+		align-items:center;
+		.footer-item{
+			div{
+				background-repeat: no-repeat;
+				background-position: center;
+				height:px2rem(22px);
+				width:px2rem(22px);
+			}
+			p{
+				font-size:13px;
+				color:#333;
+			}
+			.index{
+	
+			}
+			.faxian{
+
+			}
+			.user{
+
+			}
+			p{
+
+			}
+		}
+	}
+}
