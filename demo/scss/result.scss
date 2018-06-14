@@ -36,12 +36,13 @@
 			}
 			.bg-blue{
 				background-color: #3168c6;
+				opacity: 0.8;
 			}
 			.tip{
 				width:px2rem(32px);
 				height:px2rem(35px);
 				position: absolute;
-				top:-3px;
+				top:-4px;
 				right:10px;
 				background-size: 100% 100%;
 			}

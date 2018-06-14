@@ -10,25 +10,33 @@
 <script src="scripts/jquery.min.js"></script>
 <script src="scripts/global.js"></script>
 <script src="scripts/swiper.min.js"></script>
+<script src="scripts/layer.js"></script>
 </head>
 <body>
     <div class="direction-column page-index">
 		<div class="wrap">
 			<div class="grid-top">
-				<div class="swiper-container">
-				  <div class="swiper-wrapper">
-				    <div class="swiper-slide banner01">
 
-				    </div>
-				    <div class="swiper-slide banner02">
-				    	
-				    </div>
-				    <div class="swiper-slide banner03">
-				    	
-				    </div>
-				  </div>
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide banner01">
+							<img src="images/banner.png" alt="">
+						</div>
+						<div class="swiper-slide banner02">
+							<img src="images/banner.png" alt="">
+						</div>
+						<div class="swiper-slide banner03">
+							<img src="images/banner.png" alt="">
+						</div>
+						<div class="swiper-slide banner03">
+							<img src="images/banner.png" alt="">
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
 				</div>
-				<img src="images/tel.png" alt="" class="tel">
+				<a href="tel:96111">
+					<img src="images/tel.png" alt="" class="tel">
+				</a>
 			</div>
 			<div class="bg-line"></div>
 			<div class="grid-service">
@@ -67,7 +75,7 @@
 						</a>
 					</div>
 					<div class="flex-item">
-						<a href="javascript:;">
+						<a href="javascript:;" class="js-unable">
 							<div class="bg-box weizhangchaxun"></div>
 							<p>违章查询</p>
 						</a>
@@ -128,7 +136,8 @@
 			</div>
 		</div>
 		<footer class="footer-nav">
-			<a class="footer-item">
+			<!-- 当前页加 active -->
+			<a class="footer-item active">
 				<div class="index"></div>
 				<p>首页</p>
 			</a>
@@ -145,14 +154,25 @@
 <script>
 	
     var swiper = new Swiper('.swiper-container', {
-      slidesPerView: 'auto',
-      spaceBetween: 30,
+      slidesPerView: 1.1,
+      spaceBetween: 15,
+      freeMode: true,
       pagination: {
         el: '.swiper-pagination',
+        // dynamicBullets: true,
+        // dynamicMainBullets:3,
         clickable: true,
       },
     });
-  
+  	
+    $(".js-unable").click(function(){
+    	layer.open({
+		    content: '功能建设中，敬请期待',
+		    skin: 'msg',
+		    time: 1 //1秒后自动关闭
+		});
+    })
+  	
 </script>
 </body>
 </html>

@@ -345,13 +345,67 @@ a {
 .page-otherService .step {
   font-size: 16px;
   margin-top: 12px;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  line-height: 2.5rem; }
 
 .service-title {
   font-size: 16px;
   color: #000;
   height: 2.75rem;
   line-height: 2.75rem; }
+
+.input-box {
+  background-color: #ffffff;
+  box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.06);
+  border-radius: 6px;
+  padding: 5px 10px; }
+  .input-box .input-grid {
+    box-sizing: content-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-bottom: 0.5px solid #ddd;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .input-box .input-grid:last-child {
+      border: 0 none; }
+    .input-box .input-grid .title {
+      width: 5.625rem;
+      color: #aaa;
+      line-height: 2.5rem; }
+    .input-box .input-grid input {
+      display: block;
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      line-height: 2.5rem;
+      height: 2.5rem;
+      color: #aaa;
+      font-size: 12px; }
+      .input-box .input-grid input::-webkit-input-placeholder {
+        color: #ddd; }
+    .input-box .input-grid textarea {
+      margin-top: 10px;
+      padding: 5px;
+      display: block;
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      background-color: #f8f8f8;
+      color: #aaa;
+      height: 5rem;
+      margin-bottom: 15px;
+      font-size: 12px; }
+      .input-box .input-grid textarea::-webkit-input-placeholder {
+        color: #ddd; }
+    .input-box .input-grid img {
+      width: 20px;
+      height: 18px; }
+  .input-box .input-grid.center {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
 
 .page-result .result-grid {
   background-color: #FFF;
@@ -386,12 +440,13 @@ a {
     .page-result .result-grid .title .bg-green {
       background-color: #98faa3; }
     .page-result .result-grid .title .bg-blue {
-      background-color: #3168c6; }
+      background-color: #3168c6;
+      opacity: 0.8; }
     .page-result .result-grid .title .tip {
       width: 2rem;
       height: 2.1875rem;
       position: absolute;
-      top: -3px;
+      top: -4px;
       right: 10px;
       background-size: 100% 100%; }
     .page-result .result-grid .title .tip1 {
@@ -415,17 +470,34 @@ a {
 .page-result .grid2 {
   background-image: url(../images/bg2.png); }
 
-.page-index .swiper-slide {
-  height: 200px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-  background-image: url(../images/banner.png); }
+.page-index .swiper-slide img {
+  display: block;
+  width: 100%; }
+
+.page-index .swiper-container {
+  padding: 10px 10px 20px; }
+
+.page-index .swiper-slide:nth-child(2n) {
+  width: 60%; }
+
+.page-index .swiper-slide:nth-child(3n) {
+  width: 40%; }
+
+.page-index .swiper-pagination-bullet {
+  width: 6px;
+  height: 6px; }
+
+.page-index .swiper-pagination-bullet-active {
+  width: 18px;
+  border-radius: 3px; }
+
+.page-index .swiper-container-horizontal > .swiper-pagination-bullets, .page-index .swiper-pagination-custom, .page-index .swiper-pagination-fraction {
+  bottom: 0px; }
 
 .page-index .tel {
   width: 100%;
   display: block;
-  margin-top: 15px;
+  margin-top: 18px;
   margin-bottom: 15px; }
 
 .page-index .bg-line {
@@ -437,9 +509,10 @@ a {
   .page-index .grid-service .title {
     color: #000;
     font-size: 14px;
+    line-height: 14px;
     font-weight: 800;
     padding-left: 5px;
-    border-left: 2px solid #4f77fe;
+    border-left: 4px solid #4f77fe;
     margin-bottom: 15px; }
 
 .page-index .flex-grid {
@@ -517,16 +590,35 @@ a {
     background-repeat: no-repeat;
     background-position: center;
     height: 1.375rem;
-    width: 1.375rem; }
+    width: 1.375rem;
+    background-size: 22px 22px;
+    margin: 0 auto; }
   .page-index .footer-nav .footer-item p {
     font-size: 13px;
     color: #333; }
+  .page-index .footer-nav .footer-item .index {
+    background-image: url(../images/icon-index.png); }
+  .page-index .footer-nav .footer-item .faxian {
+    background-image: url(../images/icon-faxian.png); }
+  .page-index .footer-nav .footer-item .user {
+    background-image: url(../images/icon-user.png); }
+  .page-index .footer-nav .footer-item.active .index {
+    background-image: url(../images/icon-index-active.png); }
+  .page-index .footer-nav .footer-item.active .faxian {
+    background-image: url(../images/icon-faxian-active.png); }
+  .page-index .footer-nav .footer-item.active .user {
+    background-image: url(../images/icon-user-active.png); }
+  .page-index .footer-nav .footer-item.active p {
+    color: #3481eb; }
 
 .bg-gray {
   background-color: #efeef4; }
 
 .bg-fff {
   background-color: #FFF; }
+
+footer {
+  box-shadow: 0px -4px 10px 0px rgba(0, 0, 0, 0.06); }
 
 .service-tab {
   background-color: #FFF;
@@ -548,57 +640,19 @@ a {
     color: #3481eb;
     border-bottom: 2px solid #3481eb; }
 
-.input-box {
-  background-color: #ffffff;
-  box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.06);
-  border-radius: 6px;
-  padding: 5px 10px; }
-  .input-box .address {
-    border-bottom: 1px solid #ddd; }
-  .input-box .input-grid {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
-    .input-box .input-grid .title {
-      width: 5.625rem;
-      color: #aaa;
-      line-height: 2.5rem; }
-    .input-box .input-grid input {
-      display: block;
-      -webkit-box-flex: 1;
-          -ms-flex: 1;
-              flex: 1;
-      line-height: 2.5rem;
-      height: 2.5rem;
-      color: #aaa; }
-      .input-box .input-grid input::-webkit-input-placeholder {
-        color: #ddd; }
-    .input-box .input-grid textarea {
-      margin-top: 10px;
-      display: block;
-      -webkit-box-flex: 1;
-          -ms-flex: 1;
-              flex: 1;
-      background-color: #f8f8f8;
-      color: #aaa;
-      height: 5rem;
-      margin-bottom: 15px; }
-      .input-box .input-grid textarea::-webkit-input-placeholder {
-        color: #ddd; }
-    .input-box .input-grid img {
-      width: 18px;
-      height: 18px; }
-  .input-box .input-grid.center {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
+.arrow {
+  color: #ddd;
+  -webkit-transform: scaleY(1.5);
+          transform: scaleY(1.5);
+  font-weight: 200;
+  font-size: 12px; }
 
 .bigtitle .title {
   width: 6.875rem !important; }
 
 .money-footer {
   background-color: #FFF;
-  height: 3.0625rem;
+  height: 3.125rem;
   padding: 0 10px;
   display: -webkit-box;
   display: -ms-flexbox;

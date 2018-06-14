@@ -13,7 +13,6 @@
 <script src="scripts/global.js"></script>
 <script>
 	$(function(){
-
 	    $("#city-picker1").cityPicker({
 	        title: "选择省市区/县",
 	        onChange: function (picker, values, displayValues) {
@@ -26,7 +25,12 @@
 	            // console.log(values, displayValues);
 	        }
 	    });
-
+	    $("#city-picker3").cityPicker({
+	        title: "选择省市区/县",
+	        onChange: function (picker, values, displayValues) {
+	            // console.log(values, displayValues);
+	        }
+	    });
 	})
 </script>
 </head>
@@ -58,7 +62,8 @@
 	    		</div>
 	    		<div class="input-grid">
 	    			<div class="title">发证机关：</div>
-	    			<input type="text" placeholder="请选择省市">
+	    			<input type="text" placeholder="请选择省市" id="city-picker3">
+	    			<div class="arrow">></div>
 	    		</div>
 	    	</div>
 	    	<div class="service-title">邮寄地址</div>
@@ -66,6 +71,7 @@
 	    		<div class="input-grid address">
 	    			<div class="title">选择地区：</div>
 	    			<input type="text" placeholder="请选择地区" id="city-picker1">
+	    			<div class="arrow">></div>
 	    		</div>
 	    		<div class="input-grid">
 	    			<div class="title">详细地址：</div>
@@ -77,6 +83,7 @@
 	    		<div class="input-grid address">
 	    			<div class="title">选择地区：</div>
 	    			<input type="text" placeholder="请选择地区" id="city-picker2">
+	    			<div class="arrow">></div>
 	    		</div>
 	    		<div class="input-grid">
 	    			<div class="title">详细地址：</div>

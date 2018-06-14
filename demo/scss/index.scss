@@ -1,15 +1,39 @@
 .page-index{
 	.swiper-slide{
-		height:200px;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: 100%;
-		background-image: url(../images/banner.png);
+		img{
+			display: block;
+			width:100%;
+		}
+		// height:180px;
+		// background-repeat: no-repeat;
+		// background-position: center;
+		// background-size: 100%;
+		// background-image: url(../images/banner.png);
 	}
+	.swiper-container{
+		padding:10px 10px 20px;
+	}
+	.swiper-slide:nth-child(2n) {
+      width: 60%;
+    }
+    .swiper-slide:nth-child(3n) {
+      width: 40%;
+    }
+    .swiper-pagination-bullet{
+    	width:6px;
+    	height: 6px;
+    }
+    .swiper-pagination-bullet-active{
+    	width:18px;
+    	border-radius: 3px;
+    }
+    .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+    	bottom:0px;
+    }
 	.tel{
 		width:100%;
 		display: block;
-		margin-top:15px;
+		margin-top:18px;
 		margin-bottom:15px;
 	}
 	.bg-line{
@@ -21,9 +45,10 @@
 		.title{
 			color:#000;
 			font-size:14px;
+			line-height: 14px;
 			font-weight: 800;
 			padding-left:5px;
-			border-left:2px solid #4f77fe;
+			border-left:4px solid #4f77fe;
 			margin-bottom: 15px;
 		}
 	}
@@ -115,22 +140,35 @@
 				background-position: center;
 				height:px2rem(22px);
 				width:px2rem(22px);
+				background-size: 22px 22px;
+				margin:0 auto;
 			}
 			p{
 				font-size:13px;
 				color:#333;
 			}
 			.index{
-	
+				background-image:url(../images/icon-index.png);
 			}
 			.faxian{
-
+				background-image:url(../images/icon-faxian.png);
 			}
 			.user{
-
+				background-image:url(../images/icon-user.png);
 			}
-			p{
-
+			&.active{
+				.index{
+					background-image:url(../images/icon-index-active.png);
+				}
+				.faxian{
+					background-image:url(../images/icon-faxian-active.png);
+				}
+				.user{
+					background-image:url(../images/icon-user-active.png);
+				}
+				p{
+					color:#3481eb;
+				}
 			}
 		}
 	}
