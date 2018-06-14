@@ -359,7 +359,7 @@ a {
   background-color: #ffffff;
   box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.06);
   border-radius: 6px;
-  padding: 5px 10px; }
+  padding: 5px 15px; }
   .input-box .input-grid {
     box-sizing: content-box;
     display: -webkit-box;
@@ -397,7 +397,7 @@ a {
       background-color: #f8f8f8;
       color: #aaa;
       height: 5rem;
-      margin-bottom: 15px;
+      margin-bottom: 6px;
       font-size: 14px; }
       .input-box .input-grid textarea::-webkit-input-placeholder {
         color: #ddd; }
@@ -476,12 +476,11 @@ a {
 .page-result .grid2 {
   background-image: url(../images/bg2.png); }
 
-.page-index .swiper-slide img {
-  display: block;
-  width: 100%; }
-
-.page-index .grid-banner {
+.page-index .swiper-slide {
   padding: 0 10px; }
+  .page-index .swiper-slide img {
+    display: block;
+    width: 100%; }
 
 .page-index .swiper-container {
   padding: 10px 0 20px; }

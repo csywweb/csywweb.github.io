@@ -25,7 +25,7 @@
   box-shadow: 0px 10px 40px 0px 
   rgba(0, 0, 0, 0.06);
   border-radius: 6px;
-  padding:5px 10px;
+  padding:5px 15px;
   .input-grid{
     box-sizing:content-box;
     display: flex;
@@ -60,7 +60,7 @@
       background-color: #f8f8f8;
       color:#aaa;
       height:px2rem(80px);
-      margin-bottom:15px;
+      margin-bottom:6px;
       font-size:14px;
       &::-webkit-input-placeholder{
         color: #ddd;
