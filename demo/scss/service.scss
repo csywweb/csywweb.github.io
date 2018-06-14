@@ -1,4 +1,5 @@
 .page-otherService{
+  padding-bottom:10px;
   .step{
     font-size:16px;
     margin-top:12px;
@@ -25,12 +26,10 @@
   rgba(0, 0, 0, 0.06);
   border-radius: 6px;
   padding:5px 10px;
-  .address{
-      
-  }
   .input-grid{
     box-sizing:content-box;
     display: flex;
+    padding:3px 0;
     border-bottom: 0.5px solid #ddd;
     align-items:center;
     &:last-child{
@@ -45,10 +44,10 @@
     input{
       display: block;;
       flex:1;
-      line-height: px2rem(40px);
-      height:px2rem(40px);
+      line-height: px2rem(20px);
+      height:px2rem(20px);
       color:#aaa;
-      font-size:12px;
+      font-size:14px;
       &::-webkit-input-placeholder{
         color: #ddd;
       }
@@ -62,7 +61,7 @@
       color:#aaa;
       height:px2rem(80px);
       margin-bottom:15px;
-      font-size:12px;
+      font-size:14px;
       &::-webkit-input-placeholder{
         color: #ddd;
       }
@@ -71,6 +70,9 @@
       width:20px;
       height:18px;
     }
+  }
+  .address{
+      align-items:flex-start;
   }
   .input-grid.center{
     align-items:center;

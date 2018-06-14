@@ -16,24 +16,26 @@
     <div class="direction-column page-index">
 		<div class="wrap">
 			<div class="grid-top">
-
-				<div class="swiper-container">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide banner01">
-							<img src="images/banner.png" alt="">
+				<div class="grid-banner">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide banner01">
+								<img src="images/banner.png" alt="">
+							</div>
+							<div class="swiper-slide banner02">
+								<img src="images/banner.png" alt="">
+							</div>
+							<div class="swiper-slide banner03">
+								<img src="images/banner.png" alt="">
+							</div>
+							<div class="swiper-slide banner03">
+								<img src="images/banner.png" alt="">
+							</div>
 						</div>
-						<div class="swiper-slide banner02">
-							<img src="images/banner.png" alt="">
-						</div>
-						<div class="swiper-slide banner03">
-							<img src="images/banner.png" alt="">
-						</div>
-						<div class="swiper-slide banner03">
-							<img src="images/banner.png" alt="">
-						</div>
+						<div class="swiper-pagination"></div>
 					</div>
-					<div class="swiper-pagination"></div>
 				</div>
+				
 				<a href="tel:96111">
 					<img src="images/tel.png" alt="" class="tel">
 				</a>
@@ -154,9 +156,6 @@
 <script>
 	
     var swiper = new Swiper('.swiper-container', {
-      slidesPerView: 1.1,
-      spaceBetween: 15,
-      freeMode: true,
       pagination: {
         el: '.swiper-pagination',
         // dynamicBullets: true,

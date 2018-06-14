@@ -84,7 +84,6 @@ button {
 input, select, textarea {
   outline: none;
   vertical-align: middle;
-  border-radius: 5px;
   font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif; }
 
 input[type='button'], input[type='reset'], input[type='submit'] {
@@ -342,11 +341,13 @@ a {
   100% {
     opacity: 0; } }
 
-.page-otherService .step {
-  font-size: 16px;
-  margin-top: 12px;
-  margin-bottom: 15px;
-  line-height: 2.5rem; }
+.page-otherService {
+  padding-bottom: 10px; }
+  .page-otherService .step {
+    font-size: 16px;
+    margin-top: 12px;
+    margin-bottom: 15px;
+    line-height: 2.5rem; }
 
 .service-title {
   font-size: 16px;
@@ -364,6 +365,7 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    padding: 3px 0;
     border-bottom: 0.5px solid #ddd;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -379,10 +381,10 @@ a {
       -webkit-box-flex: 1;
           -ms-flex: 1;
               flex: 1;
-      line-height: 2.5rem;
-      height: 2.5rem;
+      line-height: 1.25rem;
+      height: 1.25rem;
       color: #aaa;
-      font-size: 12px; }
+      font-size: 14px; }
       .input-box .input-grid input::-webkit-input-placeholder {
         color: #ddd; }
     .input-box .input-grid textarea {
@@ -396,12 +398,16 @@ a {
       color: #aaa;
       height: 5rem;
       margin-bottom: 15px;
-      font-size: 12px; }
+      font-size: 14px; }
       .input-box .input-grid textarea::-webkit-input-placeholder {
         color: #ddd; }
     .input-box .input-grid img {
       width: 20px;
       height: 18px; }
+  .input-box .address {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
   .input-box .input-grid.center {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -419,7 +425,7 @@ a {
   .page-result .result-grid .title {
     height: 2.75rem;
     line-height: 2.75rem;
-    border-bottom: 1px solid #DDD;
+    border-bottom: 0.5px solid #DDD;
     margin-bottom: 10px;
     position: relative; }
     .page-result .result-grid .title .text {
@@ -474,8 +480,11 @@ a {
   display: block;
   width: 100%; }
 
+.page-index .grid-banner {
+  padding: 0 10px; }
+
 .page-index .swiper-container {
-  padding: 10px 10px 20px; }
+  padding: 10px 0 20px; }
 
 .page-index .swiper-slide:nth-child(2n) {
   width: 60%; }
