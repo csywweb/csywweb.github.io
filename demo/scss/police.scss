@@ -1,0 +1,138 @@
+.page-police-detail{
+	.grid-address{
+		background-color: #fff;
+		padding:0 10px;
+		border-bottom-left-radius: 4px;
+		border-bottom-right-radius: 4px;
+		.address-cont{
+			display: flex;
+			padding:12px 0;
+			p{
+				flex:1;
+				font-size:12px;
+				line-height: 22px;
+				color:#999;
+			}
+			img{
+
+			}
+		}
+		.search{
+			border-top:0.5px solid #ddd;
+			display: flex;
+			justify-content:center;
+			align-items:center;
+			height:40px;
+			a{
+				color:#3c8bf8;
+				font-size:15px;
+				line-height: 20px;
+				display: flex;
+				align-items:center;
+				img{
+					width:23px;
+					height:25px;
+					margin-top:5px;
+				}
+			}
+			
+		}
+	}
+	.wrap{
+		padding:0 10px;
+		h3{
+			font-size:14px;
+			color:#000;
+			line-height: 42px;
+		}
+	}
+	section{
+		border-radius: 4px;
+		margin-bottom:10px;
+		overflow: hidden;
+		background-color: #FFF;
+		.title{
+			padding:0 20px;
+			display: flex;
+			align-items:center;
+			height: 47px;
+			color:#FFF;
+			position: relative;
+			background: linear-gradient(to right, #3c8bf8 , #4ccfff); 
+			.police{
+				margin-left: 10px;
+				width:23px;
+				height:22px;
+			}
+			.bg{
+				position: absolute;
+				height:47px;
+				width:81px;
+				top:0;
+				right:0;
+			}
+		}
+		.ctx{
+			padding:8px 20px 15px;
+			p{
+				margin-top:8px;
+				font-size:13px;
+				line-height: 20px;
+				span{
+					color:#aaa;
+					display: inline-block;
+					width:65px;
+				}
+			}
+		}
+		.btn-groups{
+			padding:0 10px;
+			.col-12{
+				border-top:0.5px solid #ddd;
+			}
+			.col-6{
+				display: flex;
+				justify-content:center;
+				height:50px;
+				align-items:center;
+				position: relative;
+				a{	
+				    align-items:center;
+					display: flex;
+					color:#3c8bf8;
+				}
+				.icon{
+					border-radius: 50%;
+					display: inline-block;
+					width:25px;
+					height:25px;
+					border:2px solid #3c8bf8;
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: 13px 13px;
+					margin-right:10px;
+				}
+				.icon-tel{
+					background-image: url(../images/icon-tel.png);
+				}
+				.icon-sms{
+					background-image: url(../images/icon-sms.png);
+				}
+				&:first-child::after{
+					content: " ";
+					height:18px;
+					width:1px;
+					background-color: #DDD;
+					position: absolute;
+					top:50%;
+					margin-top: -9px;
+					right:0;
+				}
+			}
+		}
+	}
+}
+
+
+
+

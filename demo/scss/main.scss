@@ -5,6 +5,12 @@
 @import "service";
 @import "result";
 @import "index";
+@import "police";
+@import "send";
+@import "dialog";
+@import "contect";
+@import "news";
+
 .bg-gray{
   background-color: #efeef4;
 }
@@ -46,13 +52,167 @@ footer{
   transform: scaleY(1.5);
   font-weight: 200;
   font-size:12px;
+  line-height: 12px;
+  height:12px;
+  display: inline-block;
 }
+
+.input-grid{
+  box-sizing:content-box;
+  display: flex;
+  border-bottom: 0.5px solid #ddd;
+  align-items:center;
+  font-size:14px;
+  &:last-child{
+    border:0 none;
+  }
+  // height:px2ren(92px);
+  .title{
+    width:px2rem(90px);
+    color:#aaa;
+    line-height: px2rem(40px);
+  }
+  input{
+    display: block;;
+    flex:1;
+    line-height: px2rem(20px);
+    height:px2rem(20px);
+    color:#aaa;
+    font-size:14px;
+    &::-webkit-input-placeholder{
+      color: #ddd;
+    }
+  }
+  textarea{
+    margin-top:10px;
+    padding:5px;
+    display: block;
+    flex:1;
+    background-color: #f8f8f8;
+    color:#aaa;
+    height:px2rem(80px);
+    margin-bottom:6px;
+    font-size:14px;
+    &::-webkit-input-placeholder{
+      color: #aaa;
+      font-size: 14px;
+    }
+  }
+  select{
+    flex:1;
+    background-color: #FFF;
+  }
+  img{
+    width:20px;
+    height:18px;
+  }
+}
+.input-grid.address{
+  align-items:flex-start;
+}
+
 
 .bigtitle .title{
   width:px2rem(110px) !important;
 }
 
-
+.bg-line{
+  height:8px;
+  background-color: #efeef4;
+}
+.grid-service{
+  padding:20px 10px 0;
+  .title{
+    color:#000;
+    font-size:14px;
+    line-height: 14px;
+    font-weight: 800;
+    padding-left:5px;
+    border-left:4px solid #4f77fe;
+    margin-bottom: 15px;
+  }
+  .list-grid{
+    width:100%;
+    overflow: hidden;
+    .list-item{
+      float: left;
+      width:1/3*100%;
+      margin-bottom:20px;
+      a{
+        display: block;
+        width:px2rem(55px);
+        margin:0 auto;
+        img{
+          width:55px;
+          height:55px;
+          display: block;
+          margin:0 auto;
+        }
+        .bg-box{
+          width:px2rem(55px);
+          height:px2rem(55px);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 100% 100%;
+        }
+        p{
+          text-align: center;
+        }
+        p.name{
+          font-weight: 800;
+          color:#000;
+          margin-top:5px;
+        }
+        p.desc{
+          font-size:13px;
+          margin-top:10px;
+          &:last-child{
+            margin-top:2px;
+          }
+        }
+        .zaixianzixun{
+          background-image: url(../images/zaixianzixun.png);
+        }
+        .wangshangyuyue{
+          background-image: url(../images/wangshangyuyue.png);
+        }
+        .wangshangbanshi{
+          background-image: url(../images/wangshangbanshi.png);
+        }
+        .shequminjing{
+          background-image: url(../images/shequminjing.png);
+        }
+        .xiansuojubao{
+          background-image: url(../images/xiansuojubao.png);
+        }
+        .weizhangchaxun{
+          background-image: url(../images/weizhangchaxun.png);
+        }
+        .gerenjidi{
+          background-image: url(../images/gerenjidi.png);
+        }
+        .jiazhengfuwu{
+          background-image: url(../images/jiazhengfuwu.png);
+        }
+        .daolujiuyuan{
+          background-image: url(../images/daolujiuyuan.png);
+        }
+        .jikaisuo{
+          background-image: url(../images/jikaisuo.png);
+        }
+        .diannaoweixiu{
+          background-image: url(../images/diannaoweixiu.png);
+        }
+        .jiadianweixiu{
+          background-image: url(../images/jiadianweixiu.png);
+        }
+        .gengduo{
+          background-image: url(../images/gengduo.png);
+        }
+      }
+    }
+  }
+}
 .money-footer{
   background-color: #FFF;
   height:px2rem(50px);
@@ -69,3 +229,84 @@ footer{
     width:px2rem(100px);
     }
 }
+.footer-nav{
+    height:46px;
+    display: flex;
+    box-shadow: 0px -4px 10px 0px 
+    rgba(0, 0, 0, 0.06);
+    justify-content:space-around;
+    align-items:center;
+    .footer-item{
+      div{
+        background-repeat: no-repeat;
+        background-position: center;
+        height:px2rem(22px);
+        width:px2rem(22px);
+        background-size: 22px 22px;
+        margin:0 auto;
+      }
+      p{
+        font-size:13px;
+        color:#333;
+      }
+      .index{
+        background-image:url(../images/icon-index.png);
+      }
+      .faxian{
+        background-image:url(../images/icon-faxian.png);
+      }
+      .user{
+        background-image:url(../images/icon-user.png);
+      }
+      &.active{
+        .index{
+          background-image:url(../images/icon-index-active.png);
+        }
+        .faxian{
+          background-image:url(../images/icon-faxian-active.png);
+        }
+        .user{
+          background-image:url(../images/icon-user-active.png);
+        }
+        p{
+          color:#3481eb;
+        }
+      }
+    }
+  }
+// 新闻导航
+.news-nav{
+  width:100%;
+  padding:0 30px;
+  overflow: hidden;
+  background-color: #FFF;
+  position: relative;
+  z-index:10;
+  box-shadow: 0px 4px 10px 0px 
+    rgba(0, 0, 0,0.06);
+  .item{
+    float: left;
+    width:33.33333%;
+    text-align: center;
+    a{
+      color:#aaa;
+      display: inline-block;
+      line-height: 38px;
+      &:visited{
+        color:#aaa;
+      }
+      &:actived{
+        color:#aaa;
+      }
+    }
+    &.active{
+      a{
+        color:#3481eb;
+        border-bottom:2px solid #3481eb;
+      }
+    }
+  }
+}
+
+
+

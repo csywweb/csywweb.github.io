@@ -27,49 +27,7 @@
   border-radius: 6px;
   padding:5px 15px;
   .input-grid{
-    box-sizing:content-box;
-    display: flex;
     padding:3px 0;
-    border-bottom: 0.5px solid #ddd;
-    align-items:center;
-    &:last-child{
-      border:0 none;
-    }
-    // height:px2ren(92px);
-    .title{
-      width:px2rem(90px);
-      color:#aaa;
-      line-height: px2rem(40px);
-    }
-    input{
-      display: block;;
-      flex:1;
-      line-height: px2rem(20px);
-      height:px2rem(20px);
-      color:#aaa;
-      font-size:14px;
-      &::-webkit-input-placeholder{
-        color: #ddd;
-      }
-    }
-    textarea{
-      margin-top:10px;
-      padding:5px;
-      display: block;
-      flex:1;
-      background-color: #f8f8f8;
-      color:#aaa;
-      height:px2rem(80px);
-      margin-bottom:6px;
-      font-size:14px;
-      &::-webkit-input-placeholder{
-        color: #ddd;
-      }
-    }
-    img{
-      width:20px;
-      height:18px;
-    }
   }
   .address{
       align-items:flex-start;

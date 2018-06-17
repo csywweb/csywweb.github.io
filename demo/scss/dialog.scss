@@ -1,0 +1,35 @@
+.dialog{
+  position: fixed;
+  top:0;
+  left:0;
+  z-index:100;
+  width:100%;
+  height:100%;
+  background-color:rgba(0, 0, 0, .5);
+  .dialog-ctx{
+    padding:0 10px;
+    position: absolute;
+    width:100%;
+    top:50%;
+    transform: translateY(-50%);
+  }
+  .cont{
+    background-color: #FFF;
+    border-radius: 4px;
+    .input-grid{
+      padding:3px 0;
+    }
+  }
+}
+
+.dialog-send{
+  h3{
+    text-align: center;
+    line-height: 30px;
+    margin:5px 0;
+  }
+  .btn{
+    margin-top:10px;
+  }
+}
+
